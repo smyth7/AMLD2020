@@ -692,4 +692,12 @@ A core challenge for both physics and artificial intellicence (AI) is symbolic r
 
 AI in sustainable development goals. Tegmark et al. 
 
+## Some NLP references
+
+Ruder newsletter <http://newsletter.ruder.io/issues/nlp-progress-restrospectives-and-look-ahead-new-nlp-courses-independent-research-initiatives-interviews-lots-of-resources-217744>
+
+<https://text-machine-lab.github.io/blog/2020/bert-secrets/?utm_campaign=NLP%20News&utm_medium=email&utm_source=Revue%20newsletter>
+
+<https://ml6.eu/a-general-pattern-for-deploying-embedding-based-machine-learning-models/>
+
 
