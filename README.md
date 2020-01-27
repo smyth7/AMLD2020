@@ -645,6 +645,6 @@ Nature Methods: Deep Learning in Microscopy.
 
 Liu et al Lancet Digital Health, A comparison of deep learning performance against health-care professionals in detecting diseases from medical imaging: a systematic review and meta-analysis. <https://www.thelancet.com/journals/landig/article/PIIS2589-7500(19)30123-2/fulltext>
 
+Most MS lesions have a vein in the middle - how the disease propagates.
 
-
-
+Ravano et al disconectome ECTRIMS 19.
