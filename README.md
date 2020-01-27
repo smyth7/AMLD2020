@@ -547,7 +547,7 @@ The Bitter Lesson - Sutton.
 
 OpenAI compute over time graph <https://openai.com/blog/ai-and-compute/>:
 
-<img src='ai-and-compute-all.png'>
+<img src='OpenAI_charts/ai-and-compute-all.png'>
 
 Exponential growth up to 2010 in ML SOTA compute (Moores law of transistors -> compute). Since 2010, doubling time dropped to 3.5 months. 10x increase every 12 months.
 
@@ -648,3 +648,48 @@ Liu et al Lancet Digital Health, A comparison of deep learning performance again
 Most MS lesions have a vein in the middle - how the disease propagates.
 
 Ravano et al disconectome ECTRIMS 19.
+
+## Day 3  - Evening session
+
+### Vetterli
+
+<https://www.theguardian.com/books/2019/oct/24/human-compatible-ai-problem-control-stuart-russell-review>
+
+Ball: How to grow a human. 
+
+RUR Kapek
+
+### Kosinski - The End of Privacy
+
+500mb digital footprint everyday in 2012 (IBM).
+
+3 traits link personality and face.
+
+Hormones affect faces. 
+
+Traits from faces: People get about 54% in lab test. Think about how gender can be determined. Brain just not evolved to this yet. Computer hits work colleague level  of accuracy.
+
+Predicting political views from faces: 90% accurate.
+
+Privacy is already lot. We need to make the post-privacy world livable. The problem is not privacy, it is e.g. homophobia.
+
+### Tegmark
+
+Ultrasound for everyone:  https://www.butterflynetwork.com/
+
+Asilomar 2017, Principles: <https://futureoflife.org/ai-principles/?cn-reloaded=1>
+
+<https://www.nationalgeographic.com/news/2016/03/you-and-almost-everyone-you-know-owe-your-life-to-this-man/>
+
+AI Feynman: a Physics-Inspired Method for Symbolic Regression
+Silviu-Marian Udrescu (MIT), Max Tegmark (MIT)
+(Submitted on 27 May 2019)
+A core challenge for both physics and artificial intellicence (AI) is symbolic regression: finding a symbolic expression that matches data from an unknown function. Although this problem is likely to be NP-hard in principle, functions of practical interest often exhibit symmetries, separability, compositionality and other simplifying properties. In this spirit, we develop a recursive multidimensional symbolic regression algorithm that combines neural network fitting with a suite of physics-inspired techniques. We apply it to 100 equations from the Feynman Lectures on Physics, and it discovers all of them, while previous publicly available software cracks only 71; for a more difficult test set, we improve the state of the art success rate from 15% to 90%.
+
+<https://arxiv.org/abs/1905.11481>
+
+<https://rodneybrooks.com/blog/>
+
+AI in sustainable development goals. Tegmark et al. 
+
+
