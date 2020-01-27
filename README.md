@@ -640,3 +640,11 @@ Challenges: Annotation, integrate omics, correlate imaging techniques.
 Community : image.sc<https://forum.image.sc/> 
 
 Nature Methods: Deep Learning in Microscopy.
+
+### Health -  Beyond lesion count: machine learning based imaging markers in multiple sclerosis
+
+Liu et al Lancet Digital Health, A comparison of deep learning performance against health-care professionals in detecting diseases from medical imaging: a systematic review and meta-analysis. <https://www.thelancet.com/journals/landig/article/PIIS2589-7500(19)30123-2/fulltext>
+
+
+
+
