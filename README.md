@@ -701,3 +701,33 @@ Ruder newsletter <http://newsletter.ruder.io/issues/nlp-progress-restrospectives
 <https://ml6.eu/a-general-pattern-for-deploying-embedding-based-machine-learning-models/>
 
 
+## Day 4 AM - AI & Pharma
+
+### Roche Intro - Asif Jan
+
+General overview.
+
+### Developing Digital Measures from Person-Generated Health Data, Luca Foschini, Co-founder & Chief Data Scientist, Evidation Health
+
+Person Generated Health Data. Toward achieving precision health.
+Gambhir SS, <https://www.ncbi.nlm.nih.gov/pubmed/29491186>. ALso includes patient reported data. 
+
+path collaborative wearable tech landscape. 
+
+What happens in between visits to the doctor. 
+
+Evidation Achievement - anyone can use with open data sharing. Can join clinical studies. Reconsent for every retro analysis for complete clarity. 
+
+Combination of passive and task-based data collected.
+
+Behaviourgram  - find a way to actually look at your data! Inspect data quality and generated hypotheses to test. Most useful part of study. 
+
+Can you differentiate cohorts based on behaviourgram. Features engineered in usual way. xgboost used for predictions. Behaviorome.
+
+SHAP used for interpretation.
+
+<https://evidation.com/research/>
+
+
+### Retinai -  Detection and quantification of disease biomarkers in ophthalmology, Agata Mosinska
+
