@@ -958,10 +958,60 @@ Flip - fix desired property and see what provokes it (think Zeiler and Fergus im
 
 Try to fold in physics. Belonging to region ICML19.
 
-** there is no ground truth **
+**there is no ground truth**
 
 Proposal - use GP mean model as ground truth. Then train an oracle model. 
 
 Note not Bayessian in that not acquiring new data. 
 
+### U Geneva: Conditional Generation of Molecules from Disentangled Representations. Amina Mollaysa
 
+Conditional image gen and style transfer for molecules.
+
+SMILE -> seq model. LSTM. Brown et al 19.
+
+molecule -> smile -> embedding -> molecule embedding concatenated with responses (?) -> LSTM. On Guacamol dataset.
+
+No latent repn. can't do style transfer.
+
+Developed latent model. 
+
+COnstrained ELBO
+
+Variational Inference: A Review for Statisticians, David M. Blei, Alp Kucukelbir, Jon D. McAuliffe. <https://arxiv.org/abs/1601.00670>
+Fixing a Broken ELBO, Alexander A. Alemi, <https://arxiv.org/abs/1711.00464>.
+
+Used Grammar based encoding.
+
+### LBNL An Autoencoder for 3D Geometries of Atomic Structures with Euclidean Neural Networks, Tess E. Smidt.
+
+<https://arxiv.org/abs/1802.08219>
+
+Atomic structures are hierarchy. Build in symmetry from the start.
+
+Spherical harmonics appearing. 
+
+Can't just use scalar product due to geometry tensors. 
+
+### EPFL: Physics-inspired Machine Learning for Materials Discovery, Michele Ceriotti
+
+Kapil Engel, Rossi MC, JCTC 19. 
+
+Ket of features with right symmetry properties. Cartesian coordindates of atoms don't fulfill most of these. Start with repn. Separate density for each atomic species. Need to make invariant by integrating over symmetry group. cf convolution.
+
+Go to 3body correlations. Body order expansion equivalent to linear idea from ML approach. 
+
+Sum over atom-centred positions. 
+
+Multiscale models.
+
+Cheng, MC PNAS 2019
+
+DUD-E protein ligand binding. Science Advances 2017. Same molecules listed as binders and non-binders for one protein - careful! 
+
+Can predict electro densities. 
+
+Salt - sum over squares or circles gives different answers. Need global info. 
+
+Long-distance equivariant repn. Incorporating long-range physics in atomic-scale machine learning
+Grisafi, Andrea ; Ceriotti, Michele
