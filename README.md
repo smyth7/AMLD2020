@@ -4,6 +4,14 @@
 
 Some repos are stored here: <https://github.com/amld>
 
+Other random notes below. See also NLP refs. 
+
+Some other interesting conferences:
+
+<https://www.eyeforpharma.com/barcelona/conference-agenda.php>
+
+<https://www.oxfordglobal.co.uk/pharmatec-series/>
+
 ## Conference plan
 
 - Saturday AM: Interpretability in Comp Bio <https://github.com/IBM/depiction/tree/master/workshops/20200125_AMLD2020>
@@ -734,6 +742,7 @@ SHAP used for interpretation.
 
 <https://evidation.com/research/>
 
+Structured data DL: https://towardsdatascience.com/structured-deep-learning-b8ca4138b848 etc.
 
 ### Retinai -  Detection and quantification of disease biomarkers in ophthalmology, Agata Mosinska
 
@@ -785,4 +794,21 @@ Drop percentages of data to measure stability. Set theoretic as its on features.
 
 On The Stability of Feature Selection in the
 Presence of Feature Correlations:  <http://www.cs.man.ac.uk/~gbrown/publications/ECML2019_stability.pdf>
+
+### Turing Institute -  Going beyond the average: causal machine learning for treatment effect heterogeneity estimation, Karla DiazOrdaz
+
+Causal effects of cancer treatments. Potential outcomes. Causal estimand. Statistical estimand from observed data. average treatment effect (ATE), conditional average treatment effect (CATE). <https://arxiv.org/pdf/1903.00402.pdf>
+
+Intervals: bootstrap not good. Plug-in bias in ML. Doubly-robust estimators. See also targeted MLE. 
+
+Causal forest - <https://scholar.princeton.edu/sites/default/files/bstewart/files/lundberg_methods_tutorial_reading_group_version.pdf>
+
+Maximise heterogeneity in treatment effect in terminal node, rather than  rmse. "Honesty". 
+
+Double Machine Learning? 
+
+### Novartis -  AE Brain - Detecting Adverse Drug Events with NLP, Damir Bucar & Moritz Freidank. 
+
+Monitoring social media text for potential cases of adverse events is an important, but manual and expensive task in pharmacovigilance. AE Brain uses an ensemble of NLP models (BERT, BioBERT, character-based models) to automatically detect potential mentions of adverse events and reduce the manual workload required for monitoring. By adopting a human-in-the-loop approach and rendering re-training fully reproducible our system ensures continuous improvement of our model and achieves GxP compliance.
+
 
