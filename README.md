@@ -91,7 +91,7 @@ IBM upcoming article on modelling how to combine expert interpretation/annotatio
 
 ### Libraries
 
-Depiciton
+Depiction
 
 <https://kipoi.org> - omics model view.
 
@@ -179,7 +179,7 @@ RNN: information needs kept for a long time in internal states.
 
 Attention: importance of every token for every other token - Query Key product (care: matrix vis in slides is random!)
 
-BERT introduced bidirectionality by using a transformer instead of an LSTM encoder
+BERT introduced bi-directionality by using a transformer instead of an LSTM encoder
 
 Uses two objectives:
 Mask Language Model (MLM)
@@ -193,7 +193,7 @@ Frozen BERT + task layers
 
 Adapters: “Parameter-efficient Transfer Learning for NLP”  <http://proceedings.mlr.press/v97/houlsby19a.html>
 Adapters ⇒ obtain good accuracy with less weights to tune!
-Catastrophic forgetting: forgetting what you learn in the pretraining task. Use small learning rates to avoid big changes or regularization. ULMfit: Especially for lower layers which capture general information (<https://arxiv.org/abs/1801.06146).> Learning rate warmup.
+Catastrophic forgetting: forgetting what you learn in the pre-training task. Use small learning rates to avoid big changes or regularization. ULMfit: Especially for lower layers which capture general information (<https://arxiv.org/abs/1801.06146).> Learning rate warmup.
 
 #### Several methods are possible
 
@@ -203,10 +203,10 @@ Catastrophic forgetting: forgetting what you learn in the pretraining task. Use 
 
 - Gradually unfreezing (<https://arxiv.org/abs/1801.06146)>
 
-- Finetune all parameters.
+- Fine-tune all parameters.
 
 What/when to choose:
-“To Tune or Not to Tune? Adapting Pretrained Representations to Diverse Tasks”, <https://arxiv.org/pdf/1903.05987.pdf>
+“To Tune or Not to Tune? Adapting Pre-trained Representations to Diverse Tasks”, <https://arxiv.org/pdf/1903.05987.pdf>
 
 #### Issues with BERT
 
@@ -224,9 +224,9 @@ Tricky to choose hyper-parameters
 
 Tested a bit on mac. Moved over to colab for GPU:
 
-Here are some of the main parameters you will want to consider when finetuning BERT:
+Here are some of the main parameters you will want to consider when fine-tuning BERT:
 
-- Gradient Clipping: If the norm of the gradient gets above max_grad_norm, We divide the gradient by its L2 norm. This gradient clipping method avoids exploiding gradients.
+- Gradient Clipping: If the norm of the gradient gets above max_grad_norm, We divide the gradient by its L2 norm. This gradient clipping method avoids exploding gradients.
 
 - Learning rate: The learning_rate parameter is very important as it controls how we update the already trained parameters from the Language Modelling Task. If this parameter is too high, we will notice a forgetting of the previous task. It needs to be carefully tuned.
 
@@ -236,15 +236,15 @@ Here are some of the main parameters you will want to consider when finetuning B
 
 BERT uses Word pieces. Tokens are sequences of characters - optimized. This is useful for out of vocabulary words. Word pieces are kinda of doing stemming.
 
-The input to the bert model are word-pieces (Original paper). Standard tokens are broken down into word pieces through the use of a WordPiece tokenizer.
+The input to the BERT model are word-pieces (Original paper). Standard tokens are broken down into word pieces through the use of a WordPiece tokenizer.
 
 A WordPiece tokenizer breaks the unknown words into multiple subwords. For example, if the word "chore" does not belong to the vocabulary as a single piece, it might get split into two pieces belonging to the vocabulary: 'cho' and '##re'.
 
 All the subwords start with the "#" symbol except for the first subword in the word. Imagine the words "played", "playing" are rare words and thus would not occur in a normal vocabulary. These words would be considered into the wordpiece tokenizer into this form: [play, ##ed] and [play, ##ing].
 
-You can have a look at the file bert-base-uncased-vocab.txt in your environnment to have an idea of the words present in the vocabular
+You can have a look at the file bert-base-uncased-vocab.txt in your environment to have an idea of the words present in the vocabulary
 
-Wordpiece tokenizers tends to be quite slow, however some efficient implementations exist: tokenizers from the huggingface Library are much faster than the standard naive implementations (Implemented in Rust with python bindings).
+Wordpiece tokenizers tends to be quite slow, however some efficient implementations exist: tokenizers from the Huggingface Library are much faster than the standard naive implementations (Implemented in Rust with python bindings).
 
 #### Padding
 
@@ -272,7 +272,7 @@ HuggingFace Tokenizer is much faster.
 
 Same data point goes to student and teacher. Teacher not trained, only student. Student training tries to mimic student (student loss).
 
-Approach 1: Replace label with Teacher predictions. Allows us to apply to much more unlabbled data
+Approach 1: Replace label with Teacher predictions. Allows us to apply to much more unlabeled data
 
 Approach 2: Uses labels. MSE on logits plus cross-entropy loss. Some work “Distilling Task-Specific Knowledge from BERT into Simple Neural Networks”:   <https://arxiv.org/abs/1903.12136v1>
 showed that the best performance had the cross-entropy turned off!
@@ -773,5 +773,16 @@ Weird choice to note combine databases 'to avoid biases' - I would have precisel
 
 ### U. Manchester -  On the Stability and Reproducibility of Data Science Pipelines, Gavin Brown
 
+With Roche and AZ. 
 
+Thesis: Reproducibility=Trust. We can measure Repro.
+
+Data-driven biomarker detection. 
+
+Drop percentages of data to measure stability. Set theoretic as its on features. But then he talks about dropping data points, which is features. 
+
+5 properties. 
+
+On The Stability of Feature Selection in the
+Presence of Feature Correlations:  <http://www.cs.man.ac.uk/~gbrown/publications/ECML2019_stability.pdf>
 
