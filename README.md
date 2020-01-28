@@ -809,6 +809,37 @@ Double Machine Learning?
 
 ### Novartis -  AE Brain - Detecting Adverse Drug Events with NLP, Damir Bucar & Moritz Freidank. 
 
-Monitoring social media text for potential cases of adverse events is an important, but manual and expensive task in pharmacovigilance. AE Brain uses an ensemble of NLP models (BERT, BioBERT, character-based models) to automatically detect potential mentions of adverse events and reduce the manual workload required for monitoring. By adopting a human-in-the-loop approach and rendering re-training fully reproducible our system ensures continuous improvement of our model and achieves GxP compliance.
+Monitoring social media text for potential cases of adverse events is an important, but manual and expensive task in pharmacovigilance. AE Brain uses an ensemble of NLP models (BERT, BioBERT, character-based models) to automatically detect potential mentions of adverse events and reduce the manual workload required for monitoring. By adopting a **human-in-the-loop** approach and rendering re-training fully reproducible our system ensures continuous improvement of our model and achieves GxP compliance.
 
+Detect potential adverse events.
+
+10ˆ5 posts per year, multiple sources.
+
+GxP compliant but only with human-in-the-loop. Minimize FN rate.
+
+Inter-annotator agreement as issue. Only gave results
+
+Split tweet into sentence, then binary classifier. Forward to human reviewer. Class imbalance. Low annotator agreement. Implicit context. BERT and BioBERT. Bidirectionality clearly useful here.
+
+512 max seq. length - very important, as high as you can get. batch size 4. 0.0001. 3 epochs. uncased. BioBERT worse overall, but good for edge cases. Ensembles used. Different random seeds for same model too. Any positive goes to human riew. All ensembled. Some rule based methods use for edge cases too. 
+
+Retraining for model drift. Use human review to feedback. Subsampled negatives too to feedback into retrain (ie those not seen by human).
+
+English for now. Pointing
+
+**Pan-industry  - looking for collaborators**
+
+### Novartis - Fully unsupervised deep mode of action learning for phenotyping high-content cellular
+images, Rens Janssens
+
+No superivison on mode of action. Use unsupervised DL to look for clusters of mode of action.
+Multiscale CNN <https://www.ncbi.nlm.nih.gov/pubmed/28203779> and Facebook AI clustering. 
+
+Multiscale has big field of few - local and overall cell population.
+
+Remove last layer to get embeddings. Batch correactio, whitende, tsne and clustered. Deep cluster.
+
+Tiled images
+
+Clustered. Some separation is clear before training. Look  at clusters epoch by epoch. 
 
