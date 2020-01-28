@@ -894,7 +894,74 @@ Ph2 LADDER trial.
 
 Question firsts. 
 
-Combine colonoscopy and stool proteomics. 
+Combine colonoscopy and stool proteomics to avoid full anesthesia on children.
 
+## Day 4 PM - AI & Molecules
+
+### BAIR: Jenny Listgarten  - Machine Learning-based Design of Proteins and Small Molecules
+
+Rethinking drug design in the artificial intelligence era
+<https://www.nature.com/articles/s41573-019-0050-3?draft=collection>
+
+Still quite search based.
+
+JT-VAE
+<https://arxiv.org/pdf/1802.04364>
+
+Molecule case somehow harder as there's no alphabet and it's more 3d. (?)
+
+Protein design: size scales as 20ˆL
+
+Directed Evolution. Nobel prize chemistry 18. Wetlab-based, Frances Arnold. Random changes and random places in genome. Measure what one property you care about (or proxy) - fitness function. <https://www.nobelprize.org/prizes/chemistry/2018/arnold/lecture/>
+
+How to do this in-silico?
+
+- Replace assay with predictive model
+
+- Replace random-greedy search with intelligent search
+
+Sequence -> structure -> function
+
+but can skip structure and go function! Emerging trend.
+
+Assume there exists some predictive model - stoachastic oracle. Responses: protein expression, cell fitness. Looks like combinatorial optimisation. 
+
+Flip it. Uncertainty in predictions are now important. 
+
+ML-based protein design. DNA sequence -> protein fluoro: oracle. Add constraints, like secondary structure remains unchanged.
+
+- Oracle (in any discrete case)
+- Uncertainty
+- Provide set of candidates
+
+Brookes and Listgarten 18
+
+Model-based optimisation: search over a distribution of proteins. Can use tools from probabilistic modelling.
+
+Design by adaptive sampling <arXiv:1810.03714>. The search model could be VAE, HMM etc.
+
+Gives probability distribution over proteins.
+
+Kind of a first principles approach, even if NP hard. 
+
+Brookes, Park & Listgarten. ICML19 <http://proceedings.mlr.press/v97/brookes19a.html>
+
+Linked to Estimation of Distribution Algorithms. <https://arxiv.org/abs/1905.10474>
+
+Linked to RL. 
+
+Image generation. Nguyen et al ICCV 17. 
+
+**Assumes oracle in unbiased and has good uncertainty estimate** 
+
+Flip - fix desired property and see what provokes it (think Zeiler and Fergus image work). But this gives crazy looking results.
+
+Try to fold in physics. Belonging to region ICML19.
+
+** there is no ground truth **
+
+Proposal - use GP mean model as ground truth. Then train an oracle model. 
+
+Note not Bayessian in that not acquiring new data. 
 
 
