@@ -837,9 +837,42 @@ Multiscale CNN <https://www.ncbi.nlm.nih.gov/pubmed/28203779> and Facebook AI cl
 
 Multiscale has big field of few - local and overall cell population.
 
-Remove last layer to get embeddings. Batch correactio, whitende, tsne and clustered. Deep cluster.
+Remove last layer to get embeddings. Batch correaction, whitened, tse and clustered. DeepCluster <https://arxiv.org/abs/1807.05520>.
 
 Tiled images
 
 Clustered. Some separation is clear before training. Look  at clusters epoch by epoch. 
+
+Leave out one mode of action and test. Good results. 
+
+### Novartis -  Benchmarking initiative: making sense of AI through the common task framework, Mark Bailli
+
+Care with confoudning issues, e.g. picking up prior surgery marks. 
+
+Large landscape: <https://techburst.io/ai-in-healthcare-industry-landscape-c433829b320c>
+
+How to systematically evaluate innovation:
+
+- Commnon task framework
+- Reporting guidelines
+
+50 years of Data Science: <https://www.tandfonline.com/doi/full/10.1080/10618600.2017.1384734>
+
+Common task - shared data - standard evaluation. 
+
+Tukey wrong guidelines. 
+
+Tripod Statement. <https://www.tripod-statement.org/>
+
+Equator network <https://www.equator-network.org/> 
+
+Used for external vendors only for now. Used on data challenges. 
+
+Confessions of a pragmatic statistician. Chris Chatfield
+<http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.93.3273&rep=rep1&type=pdf>
+
+Implentationn is the real black box. 
+
+Research on research. ImageNet for clinical data. 
+
 
