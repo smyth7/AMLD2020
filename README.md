@@ -1132,3 +1132,4 @@ Multi response. Deconvolution. Test for each property. Multi-objective optimisat
 
 **Developing a protein embedding space.**
 
+Using quality score from NGS. 
