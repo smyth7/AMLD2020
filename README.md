@@ -649,6 +649,8 @@ Community : image.sc<https://forum.image.sc/>
 
 Nature Methods: Deep Learning in Microscopy.
 
+Segmentation still a big issue. 
+
 ### Health -  Beyond lesion count: machine learning based imaging markers in multiple sclerosis
 
 Liu et al Lancet Digital Health, A comparison of deep learning performance against health-care professionals in detecting diseases from medical imaging: a systematic review and meta-analysis. <https://www.thelancet.com/journals/landig/article/PIIS2589-7500(19)30123-2/fulltext>
@@ -874,5 +876,25 @@ Confessions of a pragmatic statistician. Chris Chatfield
 Implentationn is the real black box. 
 
 Research on research. ImageNet for clinical data. 
+
+### Roche -  Artificial Intelligence in clinical development. Marco Prunotto
+
+Innovation embedded in all departments. 
+
+Efficacy is the biggest issue. Low win value from early design. Preclinical to clinical link is the
+biggest win. 
+
+Clinical -> PoC as big win two. Repurposing drugs. 
+
+Qualify novel endpoints. 6 minutes walk test still used a lot. 
+
+MARINA trial with huge country variabiltiy due to number of injections required. 
+
+Ph2 LADDER trial. 
+
+Question firsts. 
+
+Combine colonoscopy and stool proteomics. 
+
 
 
