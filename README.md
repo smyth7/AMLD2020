@@ -1128,4 +1128,7 @@ Build a map (?) -> empirical computation: experiments and computers.
 
 #### Main challenge
 
-Multi response. Deconvolute. Test for each property. Multiobjective optimisation.
+Multi response. Deconvolution. Test for each property. Multi-objective optimisation.
+
+**Developing a protein embedding space.**
+
