@@ -898,6 +898,8 @@ Combine colonoscopy and stool proteomics to avoid full anesthesia on children.
 
 ## Day 4 PM - AI & Molecules
 
+Bruno Correia <https://scholar.google.ch/citations?hl=en&user=Va246xYAAAAJ&view_op=list_works&sortby=pubdate>
+
 ### BAIR: Jenny Listgarten  - Machine Learning-based Design of Proteins and Small Molecules
 
 Rethinking drug design in the artificial intelligence era
@@ -1020,6 +1022,8 @@ Ridge regression.
 
 ### **Google DeepMind: AlphaFold -  Improved protein structure prediction using potentials from deep learning, Andrew Senior** 
 
+<https://deepmind.com/blog/article/AlphaFold-Using-AI-for-scientific-discovery>
+
 Protein structure prediction using multiple deep neural networks in the 13th Critical Assessment of Protein Structure Prediction (CASP13) <https://onlinelibrary.wiley.com/doi/full/10.1002/prot.25834>
 
 Improved protein structure prediction using potentials from deep learning <https://www.nature.com/articles/s41586-019-1923-7?WT.ec_id=NATURE-202001&mkt-key=005056A5C6311ED999A14F2039EAFD47&sap-outbound-id=9EB49E7379B388924AC8013686D52E221AC84B6B>
@@ -1102,9 +1106,26 @@ Expectation that Transformers will be appearing in next CASP.
 
 ### U. Liverpool Data Driven Discovery of Functional Molecular Co-Crystals, Aikaterini Vriza. 
 
+### LabGenius -  Knitting together synthetic biology, machine learning and robotics, Katya Putintseva
 
+20k human body proteins.
 
+20ˆ27000 - largest protein. 
 
+Not all seen in nature. Some have also 'disappeared'
 
+#### Protein Fitness Landscape 
 
+Each point a protein variant. Proximity means sequence is close.
 
+Build a map (?) -> empirical computation: experiments and computers. 
+
+- build trillions of protein variants
+- test for what you want
+- learn - ML mode
+- Design new
+- Continue 
+
+#### Main challenge
+
+Multi response. Deconvolute. Test for each property. Multiobjective optimisation.
