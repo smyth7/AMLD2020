@@ -1015,3 +1015,96 @@ Salt - sum over squares or circles gives different answers. Need global info.
 
 Long-distance equivariant repn. Incorporating long-range physics in atomic-scale machine learning
 Grisafi, Andrea ; Ceriotti, Michele
+
+Ridge regression.
+
+### **Google DeepMind: AlphaFold -  Improved protein structure prediction using potentials from deep learning, Andrew Senior** 
+
+Protein structure prediction using multiple deep neural networks in the 13th Critical Assessment of Protein Structure Prediction (CASP13) <https://onlinelibrary.wiley.com/doi/full/10.1002/prot.25834>
+
+Improved protein structure prediction using potentials from deep learning <https://www.nature.com/articles/s41586-019-1923-7?WT.ec_id=NATURE-202001&mkt-key=005056A5C6311ED999A14F2039EAFD47&sap-outbound-id=9EB49E7379B388924AC8013686D52E221AC84B6B>
+
+Protein structure prediction.
+
+Protein shape informs function.
+
+Target and class of drugs.
+
+Mitochondrial ATP Synthase MRC. 
+
+AA sequence -> 3d structure, atom coordinates. 
+
+AA residues N and 2C connected in chain to form backbone. Plus side chains, functional groups. 
+
+Structure -> function. 
+
+Experimental methods are difficult and expensive. 
+
+N residues -> 2N  degrees of freedom: two angles/torsions: complete parameterisation. One representation
+
+Can also have distance matrix repn.
+
+Proteins can have long-range dependencies (folding). 
+
+150k entries in PDB, but very redundant. About 30k for training. 
+
+#### Protein Co-evolution
+
+DNA constantly mutating. Inherited proteins diverge. 20N sized space. Similar sequences likely then from a common ancestor and have similar structure. Multiple sequence alignements. 
+
+Touching residues important for stability. Various instabilities exist, so a destabilising mutation may want to a stabilising co-mutation. Liely in touching residues. 
+
+FInd and align similar sequences. Compute measures of co-evolutionary correlation. Predict touching residues. Use predictions to narrow down structure search.
+
+DeepMind - probably more info in data. Distance prediction even better than predicting contacts. Look at groups of residues -> regions. Can infer secondary structure (like strand and contact). Propagate distance constraints. 
+
+Predict histogram for distances: distogram. Predict torsions. Ramachandran plot. 
+
+Refinement and side chains from Rosetta. 
+
+#### Deep distance distribution network
+
+Inductive bias - using a 2d CNN.
+
+Deep dilated convolutional residual network. 
+
+Cropping - O(Lˆ2) memory needed for all distance pairs. Crop to 64x64 squares of distance matrix. Predict also interblocks to get long range interactions. Fits in memory. Works like data augmentation, using eg strides. Centre-weighted the predictions to avoid edge effects.
+
+Predictions are on blocks that are then combine. Can Ensemble too. Edges have. 
+
+- random crop
+- Add noise
+- resample multiple sequences.
+- lr decay
+- multiple networks with different ICs ensembled.
+
+
+Nˆ2 distances and only 2N dof! 
+
+Potentials for various terms - distance + torsion + no-touching.
+
+Can initialize with a particular secondary structure.
+
+There are different domains - different folding for different parts. Can cut up, but not used in sgd approach with sklearn sgd.
+
+Approaching biological relevance. 
+
+Interpretability limited, but being worked on. 
+
+Code open-sourced. 
+
+ProSPr: Democratized Implementation of Alphafold Protein Distance Prediction Network
+<https://www.biorxiv.org/content/10.1101/830273v1>
+
+<https://github.com/dellacortelab/prospr>
+
+Expectation that Transformers will be appearing in next CASP. 
+
+### U. Liverpool Data Driven Discovery of Functional Molecular Co-Crystals, Aikaterini Vriza. 
+
+
+
+
+
+
+
