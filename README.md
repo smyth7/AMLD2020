@@ -694,6 +694,12 @@ AI in sustainable development goals. Tegmark et al.
 
 ## Some NLP references
 
+Pytorch lightening preferred high level abstraction by NLP at scale guys. See also Pytorch ignite.
+
+<https://github.com/flairNLP/flair>
+
+
+
 Ruder newsletter <http://newsletter.ruder.io/issues/nlp-progress-restrospectives-and-look-ahead-new-nlp-courses-independent-research-initiatives-interviews-lots-of-resources-217744>
 
 <https://text-machine-lab.github.io/blog/2020/bert-secrets/?utm_campaign=NLP%20News&utm_medium=email&utm_source=Revue%20newsletter>
@@ -730,4 +736,42 @@ SHAP used for interpretation.
 
 
 ### Retinai -  Detection and quantification of disease biomarkers in ophthalmology, Agata Mosinska
+
+### Astra Zeneca Bayesian Neural Networks for toxicity prediction, Elizaveta Semenova
+
+Drug induced liver injury. 
+
+Preclinical models only transfer to humans in 45%: Concordance of toxicity... <https://www.ncbi.nlm.nih.gov/pubmed/11029269>
+
+Deep-learning for drug-induced liver injury, Xu et al <https://pubs.acs.org/doi/abs/10.1021/acs.jcim.5b00238>
+
+Interpretable Outcome Prediction with Sparse Bayesian Neural Networks in Intensive Care, Hiske Overweg. <https://arxiv.org/abs/1905.02599>
+
+Moving beyond Binary Predictions of Human Drug-Induced Liver Injury (DILI) toward Contrasting Relative Risk Potential, Aleo MD <https://www.ncbi.nlm.nih.gov/pubmed/31532188>
+
+Ordered logistic regression (increasing severity score). 
+
+Predicting Drug-Induced Liver Injury with Bayesian Machine Learning, Williams DP, <https://www.ncbi.nlm.nih.gov/pubmed/31535850>
+
+Weights and biases described by distribution. Variances are being inferred from data. 
+
+Evaluation - WAIC. Ordered Brier Score - cares about the order. 
+
+150 parameters. Posterior calculated: prior, ordered likelihood (contributed this).
+
+### Roche - A Machine Learning perspective on the emotional content of Parkinsonian speech, Konstantinos Sechidis
+
+PD perceived as being unhappier compared to control, negative impact to sufferer - isolation  etc. 
+
+Combine mobile sensor data, treatment, speech etc. Annotated MP3 data. There are a few emotional speech databases. Often actors. 
+
+Standard feature engineering - 132 features. Catboost 2018. Mixture-of-Experts ensemble (k models).
+
+train: gbm, val: lr, num trees, tree depth. stratified cross-val (of course!). 
+
+Weird choice to note combine databases 'to avoid biases' - I would have precisely combined the data for this reason. Maybe I'm missing something? 
+
+### U. Manchester -  On the Stability and Reproducibility of Data Science Pipelines, Gavin Brown
+
+
 
