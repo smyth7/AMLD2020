@@ -1167,6 +1167,12 @@ Some nice basics with histograms etc., then CNN.
 
 ## Day 5 PM - Start-ups etc
 
-https://www.whattolabel.com (AMLD2020)
+<https://www.whattolabel.com> (AMLD2020)
 
 GIOTTO: <https://github.com/giotto-ai/giotto-tda>
+
+NLP tutorial from DSSS19:
+<https://github.com/steve-wilson/ds32019>
+
+Causality link from Kostas (met at DSSS18, now at Roche): <https://www.edx.org/bio/miguel-hernan>
+
