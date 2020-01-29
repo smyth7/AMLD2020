@@ -14,7 +14,7 @@ Some other interesting conferences:
 
 ## Conference plan
 
-- Saturday AM: Interpretability in Comp Bio <https://github.com/IBM/depiction/tree/master/workshops/20200125_AMLD2020>
+- Saturday AM: Interpretability in Comp Bio <https://github.com/IBM/depiction/tree/master/workshops/2020012 _AMLD2020>
 
 - Saturday PM: PyTorch <https://github.com/theevann/amld-pytorch-workshop>
 
@@ -34,7 +34,7 @@ Some other interesting conferences:
 - Tuesday PM: 1A <https://appliedmldays.org/tracks/ai-molecular-world>
   - Note there's also
     - NLP <https://appliedmldays.org/tracks/ai-nlp>
-    - Zitnik, Large-scale prediction of phenotypes from biological networks 15:30 - 16:10, 2A, AI & Nutrition
+    - Zitnik, Large-scale prediction of phenotypes from biological networks 1 -:30 - 16:10, 2A, AI & Nutrition
 
 - Wednesday AM: Keynotes <https://appliedmldays.org/tracks/wednesday-keynote-session>
 
@@ -178,6 +178,10 @@ Need as many kernels as output channels.
 HuggingFace Transformers library being used.
 
 ### Intro
+
+Bag of words: simple count, sparse representation.
+
+Embeddings: dense representations. 
 
 Word2vec: Distributional Hypothesis (1954): “a word is characterized by the company it keeps”
 Static embedding methods are not very good at encoding the context. One vector for one word.
@@ -709,7 +713,6 @@ Pytorch lightening preferred high level abstraction by NLP at scale guys. See al
 <https://github.com/flairNLP/flair>
 
 
-
 Ruder newsletter <http://newsletter.ruder.io/issues/nlp-progress-restrospectives-and-look-ahead-new-nlp-courses-independent-research-initiatives-interviews-lots-of-resources-217744>
 
 <https://text-machine-lab.github.io/blog/2020/bert-secrets/?utm_campaign=NLP%20News&utm_medium=email&utm_source=Revue%20newsletter>
@@ -1133,3 +1136,32 @@ Multi response. Deconvolution. Test for each property. Multi-objective optimisat
 **Developing a protein embedding space.**
 
 Using quality score from NGS. 
+
+## Day 5 - Extension School training material.
+
+Slides <https://docs.google.com/presentation/d/1Jg9rO_3dXwKzJyDOr2ley8Is5oWKE6D_aJJlJrpw0mw/present?slide=id.g56fd04f168_3_117>
+
+https://github.com/epfl-exts
+
+### Anomaly detection with Isolation Forests
+
+<https://github.com/epfl-exts/amld20-anomaly-detection>
+
+### Text classification
+
+<https://github.com/epfl-exts/amld20-text-classification>
+
+<https://github.com/amueller/introduction_to_ml_with_python>
+
+Standard regex and logistic regression in sklearn pipeline  <https://scikit-learn.org/stable/modules/generated/sklearn.pipeline.Pipeline.html>
+
+### Image Classification
+
+<https://github.com/epfl-exts/amld20-image-classification>
+
+Some nice basics with histograms etc., then CNN. 
+
+### Facial recognition in videos
+
+<https://github.com/epfl-exts/amld20-image-classification>
+
