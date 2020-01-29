@@ -1165,3 +1165,8 @@ Some nice basics with histograms etc., then CNN.
 
 <https://github.com/epfl-exts/amld20-image-classification>
 
+## Day 5 PM - Start-ups etc
+
+https://www.whattolabel.com (AMLD2020)
+
+GIOTTO: <https://github.com/giotto-ai/giotto-tda>
