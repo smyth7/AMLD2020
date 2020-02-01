@@ -4,7 +4,7 @@
 
 Some repos are stored here: <https://github.com/amld>
 
-Other random notes below. See also NLP refs. 
+Other random notes below. See also [Some NLP references](#SomeNLPreferences).
 
 Some other interesting conferences:
 
@@ -12,9 +12,102 @@ Some other interesting conferences:
 
 <https://www.oxfordglobal.co.uk/pharmatec-series/>
 
-## Conference plan
+<!-- vscode-markdown-toc -->
+* 1. [Conference plan](#Conferenceplan)
+* 2. [Day 1 - Interpretability in Comp Bio](#Day1-InterpretabilityinCompBio)
+	* 2.1. [Interpretability](#Interpretability)
+		* 2.1.1. [Gradient-based methods](#Gradient-basedmethods)
+		* 2.1.2. [Perturbation-based methods](#Perturbation-basedmethods)
+		* 2.1.3. [Adversial robustness](#Adversialrobustness)
+		* 2.1.4. [Rule-based models](#Rule-basedmodels)
+		* 2.1.5. [Example-based](#Example-based)
+		* 2.1.6. [Shapely](#Shapely)
+		* 2.1.7. [Surrogate methods](#Surrogatemethods)
+		* 2.1.8. [Multi-interpretation problems](#Multi-interpretationproblems)
+	* 2.2. [Libraries](#Libraries)
+* 3. [Day 1 - Pytorch intro](#Day1-Pytorchintro)
+	* 3.1. [Torch Tensors](#TorchTensors)
+	* 3.2. [Autograd](#Autograd)
+	* 3.3. [Optimisation](#Optimisation)
+	* 3.4. [CNNs](#CNNs)
+* 4. [Day 2 Transfer Learning at scale in Natural Language Processing](#Day2TransferLearningatscaleinNaturalLanguageProcessing)
+	* 4.1. [Intro](#Intro)
+	* 4.2. [Using BERT](#UsingBERT)
+		* 4.2.1. [Several methods are possible](#Severalmethodsarepossible)
+		* 4.2.2. [Issues with BERT](#IssueswithBERT)
+		* 4.2.3. [Excerise 1 - Finetuning BERT IMDB sentiment analysis](#Excerise1-FinetuningBERTIMDBsentimentanalysis)
+		* 4.2.4. [Tokenization, Word Pieces and out-of-vocabulary words](#TokenizationWordPiecesandout-of-vocabularywords)
+		* 4.2.5. [Padding](#Padding)
+		* 4.2.6. [Task](#Task)
+		* 4.2.7. [Results](#Results)
+	* 4.3. [Transfer Learning At Scale](#TransferLearningAtScale)
+		* 4.3.1. [Tokenization](#Tokenization)
+		* 4.3.2. [Distillation](#Distillation)
+	* 4.4. [Quantization](#Quantization)
+	* 4.5. [Serving models at scale](#Servingmodelsatscale)
+	* 4.6. [Correlation vs Causation](#CorrelationvsCausation)
+* 5. [Day 2 - Cross-lingual NLP](#Day2-Cross-lingualNLP)
+* 6. [Day 3 AM - Conference Keynotes](#Day3AM-ConferenceKeynotes)
+	* 6.1. [ML without growing team at Swisscom](#MLwithoutgrowingteamatSwisscom)
+	* 6.2. [Dataiku](#Dataiku)
+	* 6.3. [Learning Actionable Representations of Biomedical Data, Marinka Zitnik](#LearningActionableRepresentationsofBiomedicalDataMarinkaZitnik)
+		* 6.3.1. [Example - drug repurposing](#Example-drugrepurposing)
+	* 6.4. [Roche: Making Personalised Healthcare a reality? – More than AI, Asif Jan](#Roche:MakingPersonalisedHealthcarearealityMorethanAIAsifJan)
+	* 6.5. [Buhler  - Data Science for sustainable manufacturing](#Buhler-DataScienceforsustainablemanufacturing)
+	* 6.6. [Swiss, Re Institute. Bohn: Addressing the failure of enterprise machine intelligence (MI) with 4 AIs we should discuss more](#SwissReInstitute.Bohn:AddressingthefailureofenterprisemachineintelligenceMIwith4AIsweshoulddiscussmore)
+	* 6.7. [Unity: Simulations – The New Reality for AI, Danny Lange](#Unity:SimulationsTheNewRealityforAIDannyLange)
+	* 6.8. [**Microsoft and Novartis: Machine Learning at Exa-scale: Opportunities for Life Sciences**, Shahram Ebadollahi & Christopher Bishop](#MicrosoftandNovartis:MachineLearningatExa-scale:OpportunitiesforLifeSciencesShahramEbadollahiChristopherBishop)
+* 7. [Day 3 - PM - Parallel Tracks](#Day3-PM-ParallelTracks)
+	* 7.1. [Education -  Enhancing human learning via spaced repetition optimization, Manuel Gomez Rodriguez](#Education-EnhancinghumanlearningviaspacedrepetitionoptimizationManuelGomezRodriguez)
+	* 7.2. [**Health - Roche - Mapping medical vocabulary terms with word embeddings, Pekka Tiikkainen**](#Health-Roche-MappingmedicalvocabularytermswithwordembeddingsPekkaTiikkainen)
+	* 7.3. [**Imaging - EMBL-EBI - Machine Learning for Bioimage Informatics: Successes, Challenges, and Perspectives, Virginie Uhlmann**](#Imaging-EMBL-EBI-MachineLearningforBioimageInformatics:SuccessesChallengesandPerspectivesVirginieUhlmann)
+		* 7.3.1. [Image-based modelling](#Image-basedmodelling)
+	* 7.4. [Health -  Beyond lesion count: machine learning based imaging markers in multiple sclerosis](#Health-Beyondlesioncount:machinelearningbasedimagingmarkersinmultiplesclerosis)
+* 8. [Day 3  - Evening session](#Day3-Eveningsession)
+	* 8.1. [Vetterli](#Vetterli)
+	* 8.2. [Kosinski - The End of Privacy](#Kosinski-TheEndofPrivacy)
+	* 8.3. [Tegmark](#Tegmark)
+* 9. [Some NLP references](#SomeNLPreferences)
+* 10. [Day 4 AM - AI & Pharma](#Day4AM-AIPharma)
+	* 10.1. [Roche Intro - Asif Jan](#RocheIntro-AsifJan)
+	* 10.2. [Developing Digital Measures from Person-Generated Health Data, Luca Foschini, Co-founder & Chief Data Scientist, Evidation Health](#DevelopingDigitalMeasuresfromPerson-GeneratedHealthDataLucaFoschiniCo-founderChiefDataScientistEvidationHealth)
+	* 10.3. [Retinai -  Detection and quantification of disease biomarkers in ophthalmology, Agata Mosinska](#Retinai-DetectionandquantificationofdiseasebiomarkersinophthalmologyAgataMosinska)
+	* 10.4. [Astra Zeneca Bayesian Neural Networks for toxicity prediction, Elizaveta Semenova](#AstraZenecaBayesianNeuralNetworksfortoxicitypredictionElizavetaSemenova)
+	* 10.5. [Roche - A Machine Learning perspective on the emotional content of Parkinsonian speech, Konstantinos Sechidis](#Roche-AMachineLearningperspectiveontheemotionalcontentofParkinsonianspeechKonstantinosSechidis)
+	* 10.6. [U. Manchester -  On the Stability and Reproducibility of Data Science Pipelines, Gavin Brown](#U.Manchester-OntheStabilityandReproducibilityofDataSciencePipelinesGavinBrown)
+	* 10.7. [Turing Institute -  Going beyond the average: causal machine learning for treatment effect heterogeneity estimation, Karla DiazOrdaz](#TuringInstitute-Goingbeyondtheaverage:causalmachinelearningfortreatmenteffectheterogeneityestimationKarlaDiazOrdaz)
+	* 10.8. [Novartis -  AE Brain - Detecting Adverse Drug Events with NLP, Damir Bucar & Moritz Freidank.](#Novartis-AEBrain-DetectingAdverseDrugEventswithNLPDamirBucarMoritzFreidank.)
+	* 10.9. [Novartis - Fully unsupervised deep mode of action learning for phenotyping high-content cellular](#Novartis-Fullyunsuperviseddeepmodeofactionlearningforphenotypinghigh-contentcellular)
+	* 10.10. [Novartis -  Benchmarking initiative: making sense of AI through the common task framework, Mark Bailli](#Novartis-Benchmarkinginitiative:makingsenseofAIthroughthecommontaskframeworkMarkBailli)
+	* 10.11. [Roche -  Artificial Intelligence in clinical development. Marco Prunotto](#Roche-ArtificialIntelligenceinclinicaldevelopment.MarcoPrunotto)
+* 11. [Day 4 PM - AI & Molecules](#Day4PM-AIMolecules)
+	* 11.1. [BAIR: Jenny Listgarten  - Machine Learning-based Design of Proteins and Small Molecules](#BAIR:JennyListgarten-MachineLearning-basedDesignofProteinsandSmallMolecules)
+	* 11.2. [U Geneva: Conditional Generation of Molecules from Disentangled Representations. Amina Mollaysa](#UGeneva:ConditionalGenerationofMoleculesfromDisentangledRepresentations.AminaMollaysa)
+	* 11.3. [LBNL An Autoencoder for 3D Geometries of Atomic Structures with Euclidean Neural Networks, Tess E. Smidt](#LBNLAnAutoencoderfor3DGeometriesofAtomicStructureswithEuclideanNeuralNetworksTessE.Smidt)
+	* 11.4. [EPFL: Physics-inspired Machine Learning for Materials Discovery, Michele Ceriotti](#EPFL:Physics-inspiredMachineLearningforMaterialsDiscoveryMicheleCeriotti)
+	* 11.5. [**Google DeepMind: AlphaFold -  Improved protein structure prediction using potentials from deep learning, Andrew Senior**](#GoogleDeepMind:AlphaFold-ImprovedproteinstructurepredictionusingpotentialsfromdeeplearningAndrewSenior)
+		* 11.5.1. [Protein Co-evolution](#ProteinCo-evolution)
+		* 11.5.2. [Deep distance distribution network](#Deepdistancedistributionnetwork)
+	* 11.6. [U. Liverpool Data Driven Discovery of Functional Molecular Co-Crystals, Aikaterini Vriza.](#U.LiverpoolDataDrivenDiscoveryofFunctionalMolecularCo-CrystalsAikateriniVriza.)
+	* 11.7. [LabGenius -  Knitting together synthetic biology, machine learning and robotics, Katya Putintseva](#LabGenius-KnittingtogethersyntheticbiologymachinelearningandroboticsKatyaPutintseva)
+		* 11.7.1. [Protein Fitness Landscape](#ProteinFitnessLandscape)
+		* 11.7.2. [Main challenge](#Mainchallenge)
+* 12. [Day 5 - Extension School training material](#Day5-ExtensionSchooltrainingmaterial)
+	* 12.1. [Anomaly detection with Isolation Forests](#AnomalydetectionwithIsolationForests)
+	* 12.2. [Text classification](#Textclassification)
+	* 12.3. [Image Classification](#ImageClassification)
+	* 12.4. [Facial recognition in videos](#Facialrecognitioninvideos)
+* 13. [Day 5 PM - Start-ups etc](#Day5PM-Start-upsetc)
 
-- Saturday AM: Interpretability in Comp Bio <https://github.com/IBM/depiction/tree/master/workshops/2020012 _AMLD2020>
+<!-- vscode-markdown-toc-config
+	numbering=true
+	autoSave=true
+	/vscode-markdown-toc-config -->
+<!-- /vscode-markdown-toc -->
+
+##  1. <a name='Conferenceplan'></a>Conference plan
+
+- Saturday AM: Interpretability in Comp Bio <<https://github.com/IBM/depiction/tree/master/workshops/2020012> _AMLD2020>
 
 - Saturday PM: PyTorch <https://github.com/theevann/amld-pytorch-workshop>
 
@@ -42,17 +135,17 @@ Some other interesting conferences:
   - Governance 2 panels <https://appliedmldays.org/tracks/ai-governance>
   - Skills <https://appliedmldays.org/tracks/ai-skills>
 
-## Day 1 - Interpretability in Comp Bio
+##  2. <a name='Day1-InterpretabilityinCompBio'></a>Day 1 - Interpretability in Comp Bio
 
-### Interpretability
+###  2.1. <a name='Interpretability'></a>Interpretability
 
-#### Gradient-based methods
+####  2.1.1. <a name='Gradient-basedmethods'></a>Gradient-based methods
 
 Ancona et al, Towards better understanding of gradient-based attribution methods for Deep Neural Networks
 
  <https://arxiv.org/abs/1711.06104>
 
-#### Perturbation-based methods
+####  2.1.2. <a name='Perturbation-basedmethods'></a>Perturbation-based methods
 
 Marco Tulio Ribeiro, Sameer Singh, Carlos Guestrin, "Why Should I Trust You?": Explaining the Predictions of Any Classifier
 
@@ -68,7 +161,7 @@ Girardi,Patient Risk Assessment and Warning Symptom Detection Using Deep Attenti
 
  <https://arxiv.org/abs/1809.10804>
 
-#### Adversial robustness
+####  2.1.3. <a name='Adversialrobustness'></a>Adversial robustness
 
  Explanations based on the Missing: Towards Contrastive Explanations with Pertinent Negatives, Amit Dhurandhar, Pin-Yu Chen, Ronny Luss, Chun-Chen Tu, Paishun Ting, Karthikeyan Shanmugam, Payel Das
 
@@ -78,26 +171,26 @@ Counterfactual Explanations without Opening the Black Box: Automated Decisions a
 
 <https://arxiv.org/abs/1711.00399>
 
-#### Rule-based models
+####  2.1.4. <a name='Rule-basedmodels'></a>Rule-based models
 
 Generalized Linear Rule Models DennisWei1 Sanjeeb Dash TianGao Oktay Gunluk
 <http://proceedings.mlr.press/v97/wei19a/wei19a.pdf>
 
-#### Example-based
+####  2.1.5. <a name='Example-based'></a>Example-based
 
 "This looks like that"
 
-#### Shapely
+####  2.1.6. <a name='Shapely'></a>Shapely
 
 Calculates payout player/feature deserves
 
-#### Surrogate methods
+####  2.1.7. <a name='Surrogatemethods'></a>Surrogate methods
 
-#### Multi-interpretation problems
+####  2.1.8. <a name='Multi-interpretationproblems'></a>Multi-interpretation problems
 
 IBM upcoming article on modelling how to combine expert interpretation/annotation.
 
-### Libraries
+###  2.2. <a name='Libraries'></a>Libraries
 
 Depiction
 
@@ -105,11 +198,11 @@ Depiction
 
 <https://science.sciencemag.org/content/332/6030/687/tab-figures-data>
 
-## Day 1 - Pytorch intro
+##  3. <a name='Day1-Pytorchintro'></a>Day 1 - Pytorch intro
 
 <https://github.com/theevann/amld-pytorch-workshop>
 
-### Torch Tensors
+###  3.1. <a name='TorchTensors'></a>Torch Tensors
 
 `torch.tensor` behaves like numpy arrays under mathematical operations. However, `torch.tensor` additionally keeps track of the gradients (see next notebook) and provides GPU support.
 
@@ -129,11 +222,11 @@ Returns a new tensor with the same data as the self tensor but of a different sh
 
 `squeeze()` # removes all dimensions of size '1'
 
-### Autograd
+###  3.2. <a name='Autograd'></a>Autograd
 
 `.backward()` accumulates the gradients. If you want fresh values, you need to set x.grad to zero before you call .backward().
 
-### Optimisation
+###  3.3. <a name='Optimisation'></a>Optimisation
 
 In the example below `optimizer` keeps track of what you need:
 
@@ -165,23 +258,23 @@ class CrossEntropyLoss(_WeightedLoss):
     r"""This criterion combines :func:`nn.LogSoftmax` and :func:`nn.NLLLoss` in one single class...
 ```
 
-### CNNs
+###  3.4. <a name='CNNs'></a>CNNs
 
 First kernel gives vertical lines. Transpose to get horizontal lines.
 
 Need as many kernels as output channels.
 
-## Day 2 Transfer Learning at scale in Natural Language Processing
+##  4. <a name='Day2TransferLearningatscaleinNaturalLanguageProcessing'></a>Day 2 Transfer Learning at scale in Natural Language Processing
 
 <https://tinyurl.com/wrgy3r4>
 
 HuggingFace Transformers library being used.
 
-### Intro
+###  4.1. <a name='Intro'></a>Intro
 
 Bag of words: simple count, sparse representation.
 
-Embeddings: dense representations. 
+Embeddings: dense representations.
 
 Word2vec: Distributional Hypothesis (1954): “a word is characterized by the company it keeps”
 Static embedding methods are not very good at encoding the context. One vector for one word.
@@ -199,7 +292,7 @@ next sentence prediction (NSP)
 
 Uses special tokens to format the input: [CLS], [SEP], [MASK]
 
-### Using BERT
+###  4.2. <a name='UsingBERT'></a>Using BERT
 
 Frozen BERT + task layers
 
@@ -207,7 +300,7 @@ Adapters: “Parameter-efficient Transfer Learning for NLP”  <http://proceedin
 Adapters ⇒ obtain good accuracy with less weights to tune!
 Catastrophic forgetting: forgetting what you learn in the pre-training task. Use small learning rates to avoid big changes or regularization. ULMfit: Especially for lower layers which capture general information (<https://arxiv.org/abs/1801.06146).> Learning rate warmup.
 
-#### Several methods are possible
+####  4.2.1. <a name='Severalmethodsarepossible'></a>Several methods are possible
 
 - Freezing everything but the top layer (<https://arxiv.org/abs/1502.02791)>
 
@@ -220,7 +313,7 @@ Catastrophic forgetting: forgetting what you learn in the pre-training task. Use
 What/when to choose:
 “To Tune or Not to Tune? Adapting Pre-trained Representations to Diverse Tasks”, <https://arxiv.org/pdf/1903.05987.pdf>
 
-#### Issues with BERT
+####  4.2.2. <a name='IssueswithBERT'></a>Issues with BERT
 
 The feedforward pass is slow (Bert Large  has 335M parameters)
 
@@ -232,7 +325,7 @@ You can pre-train your own version of Bert on your dataset
 Requires lots of GPUS/TPUS
 Tricky to choose hyper-parameters
 
-#### Excerise 1 - Finetuning BERT IMDB sentiment analysis
+####  4.2.3. <a name='Excerise1-FinetuningBERTIMDBsentimentanalysis'></a>Excerise 1 - Finetuning BERT IMDB sentiment analysis
 
 Tested a bit on mac. Moved over to colab for GPU:
 
@@ -244,7 +337,7 @@ Here are some of the main parameters you will want to consider when fine-tuning 
 
 - Sequence length: The attention mechanism scales in O(L^2). So you should avoid handling sequences larger than what you really need.
 
-#### Tokenization, Word Pieces and out-of-vocabulary words
+####  4.2.4. <a name='TokenizationWordPiecesandout-of-vocabularywords'></a>Tokenization, Word Pieces and out-of-vocabulary words
 
 BERT uses Word pieces. Tokens are sequences of characters - optimized. This is useful for out of vocabulary words. Word pieces are kinda of doing stemming.
 
@@ -258,11 +351,11 @@ You can have a look at the file bert-base-uncased-vocab.txt in your environment 
 
 Wordpiece tokenizers tends to be quite slow, however some efficient implementations exist: tokenizers from the Huggingface Library are much faster than the standard naive implementations (Implemented in Rust with python bindings).
 
-#### Padding
+####  4.2.5. <a name='Padding'></a>Padding
 
 There is padding to max sequence length
 
-#### Task
+####  4.2.6. <a name='Task'></a>Task
 
 Note [CLS] token is always appearing first for the classification task.
 
@@ -270,17 +363,17 @@ Note [CLS] token is always appearing first for the classification task.
 
 Note finetuning loop is very simple: no early stopping etc.
 
-#### Results
+####  4.2.7. <a name='Results'></a>Results
 
 Spacy tokenizer is the simple classifier user. BERT is much  better for F1-score, but not other metrics covering speed and size etc.
 
-### Transfer Learning At Scale
+###  4.3. <a name='TransferLearningAtScale'></a>Transfer Learning At Scale
 
-#### Tokenization
+####  4.3.1. <a name='Tokenization'></a>Tokenization
 
 HuggingFace Tokenizer is much faster.
 
-#### Distillation
+####  4.3.2. <a name='Distillation'></a>Distillation
 
 Same data point goes to student and teacher. Teacher not trained, only student. Student training tries to mimic student (student loss).
 
@@ -289,7 +382,7 @@ Approach 1: Replace label with Teacher predictions. Allows us to apply to much m
 Approach 2: Uses labels. MSE on logits plus cross-entropy loss. Some work “Distilling Task-Specific Knowledge from BERT into Simple Neural Networks”:   <https://arxiv.org/abs/1903.12136v1>
 showed that the best performance had the cross-entropy turned off!
 
-### Quantization
+###  4.4. <a name='Quantization'></a>Quantization
 
 Why quantize:
 
@@ -340,7 +433,7 @@ Quantized BERT took 61 seconds whereas full BERT took 78 seconds.
 
 Note the scores aren't great in the notebook just because we took only 100 datapoints to save time.
 
-### Serving models at scale
+###  4.5. <a name='Servingmodelsatscale'></a>Serving models at scale
 
 -Containerize your model to make replication easy
 
@@ -354,7 +447,7 @@ One open source solution on AWS:
 
 <https://www.cortex.dev/>
 
-### Correlation vs Causation
+###  4.6. <a name='CorrelationvsCausation'></a>Correlation vs Causation
 
 Clever Hans - attending to specifc signals but not learning. Entailment.
 
@@ -370,7 +463,7 @@ Clever Hans - attending to specifc signals but not learning. Entailment.
 
 - A lot of work need to be done to understand what models are exactly learning
 
-## Day 2 - Cross-lingual NLP
+##  5. <a name='Day2-Cross-lingualNLP'></a>Day 2 - Cross-lingual NLP
 
 Catastrophic code failures! I've deleted any local work. Just go and try to make sense out of the files on my github.
 
@@ -385,7 +478,7 @@ Text representation: traditional **bag-of-words**. Given a text, extract the voc
 
 <https://arxiv.org/abs/1812.10464>
 
-## Day 3 AM - Conference Keynotes
+##  6. <a name='Day3AM-ConferenceKeynotes'></a>Day 3 AM - Conference Keynotes
 
 Ethics: 'original why it was possible' instead of regulatory. Policy people  also need to know ML.
 
@@ -397,7 +490,7 @@ Ethics: 'original why it was possible' instead of regulatory. Policy people  als
 
 sli.do AMLD2020 <https://app.sli.do/event/uldojaf3/live/questions>
 
-### ML without growing team at Swisscom
+###  6.1. <a name='MLwithoutgrowingteamatSwisscom'></a>ML without growing team at Swisscom
 
 What comes after breaking the silos (last year). So many ops. How to prioritise?
 
@@ -412,11 +505,11 @@ Multiobjective sgd requires gradient normalization.
 Evaluating the Search Phase of Neural Architecture Search
 Kaicheng Yu et al:  <https://arxiv.org/abs/1902.08142>
 
-### Dataiku
+###  6.2. <a name='Dataiku'></a>Dataiku
 
 Pitch for product
 
-### Learning Actionable Representations of Biomedical Data, Marinka Zitnik
+###  6.3. <a name='LearningActionableRepresentationsofBiomedicalDataMarinkaZitnik'></a>Learning Actionable Representations of Biomedical Data, Marinka Zitnik
 
 <https://stanford.edu/~marinka/>
 
@@ -437,7 +530,7 @@ Networks and data integration: Population - individuals - molecular. **AD mentio
 
 Actionable outputs: target id, treatment.
 
-#### Example - drug repurposing
+####  6.3.1. <a name='Example-drugrepurposing'></a>Example - drug repurposing
 
 Bipartite graph of drug-disease interactions.
 
@@ -468,7 +561,7 @@ Deep Learning for Network Biology:
 
 <https://www.iscb.org/ismb2020-submit/proceedings>
 
-### Roche: Making Personalised Healthcare a reality? – More than AI, Asif Jan
+###  6.4. <a name='Roche:MakingPersonalisedHealthcarearealityMorethanAIAsifJan'></a>Roche: Making Personalised Healthcare a reality? – More than AI, Asif Jan
 
 Asking the right q, getting the right data. Collaborate.
 
@@ -491,11 +584,11 @@ Improved curation and quality (manual and auto) to improve results.
 
 RANN: Roche advanced analytics data network. Crowd sourced across Roche. Win lunch with CEO. Lots of good models - ensembles.
 
-### Buhler  - Data Science for sustainable manufacturing
+###  6.5. <a name='Buhler-DataScienceforsustainablemanufacturing'></a>Buhler  - Data Science for sustainable manufacturing
 
 Digital twin. Replay productions. Mobile rice quality monitor.
 
-### Swiss, Re Institute. Bohn: Addressing the failure of enterprise machine intelligence (MI) with 4 AIs we should discuss more
+###  6.6. <a name='SwissReInstitute.Bohn:AddressingthefailureofenterprisemachineintelligenceMIwith4AIsweshoulddiscussmore'></a>Swiss, Re Institute. Bohn: Addressing the failure of enterprise machine intelligence (MI) with 4 AIs we should discuss more
 
 Lots of failures. Bad planning. A load of guff. Gartner.
 
@@ -530,7 +623,7 @@ Need to explain in 'ai'
 
 Causal inference.
 
-### Unity: Simulations – The New Reality for AI, Danny Lange
+###  6.7. <a name='Unity:SimulationsTheNewRealityforAIDannyLange'></a>Unity: Simulations – The New Reality for AI, Danny Lange
 
 Simulations for annotation and dataset creation. 100% true ground truth? But who fixed the physics/simulations and what may be missed.
 
@@ -548,14 +641,15 @@ Beating evolution
 - step back in time (checkpointing)
 - lower frequency: drop fill frames. But who decides?
 
-### **Microsoft and Novartis: Machine Learning at Exa-scale: Opportunities for Life Sciences**, Shahram Ebadollahi & Christopher Bishop
+###  6.8. <a name='MicrosoftandNovartis:MachineLearningatExa-scale:OpportunitiesforLifeSciencesShahramEbadollahiChristopherBishop'></a>**Microsoft and Novartis: Machine Learning at Exa-scale: Opportunities for Life Sciences**, Shahram Ebadollahi & Christopher Bishop
 
 3 key elements
+
 - Data
 - No free lunch. Prior knowledge. Less data, more prior knowledge needed.
 - Massive compute.
 
-The Bitter Lesson - Sutton. 
+The Bitter Lesson - Sutton.
 
 OpenAI compute over time graph <https://openai.com/blog/ai-and-compute/>:
 
@@ -565,9 +659,9 @@ Exponential growth up to 2010 in ML SOTA compute (Moores law of transistors -> c
 
 5mb - complete works of shakespear. cf BERT.
 
-Imperative to stay on trajectory. Huge ask, few companies. Microsoft invested in OpenAI, who move to MS for exa-scale compute. How? e.g  Graphcore 23.6 billion transistors. 
+Imperative to stay on trajectory. Huge ask, few companies. Microsoft invested in OpenAI, who move to MS for exa-scale compute. How? e.g  Graphcore 23.6 billion transistors.
 
-Cholera example. John Snow. Epidemiology invented. 
+Cholera example. John Snow. Epidemiology invented.
 
 **Novartis**
 
@@ -579,41 +673,41 @@ Data42. 2x10ˆ6 patient year of data. Lots about disease progression and longitu
 
 Challenges:
 
-- Drug design. Space of all chem compounds 10ˆ60. Still heavily expert driven. HT assays and compounds. Graph NN for molecule. Message passing. NeurIPS 18. Autoencoder for molecule. How smooth is this space. Framed as Netlix recommender with parameters fixed. 
+- Drug design. Space of all chem compounds 10ˆ60. Still heavily expert driven. HT assays and compounds. Graph NN for molecule. Message passing. NeurIPS 18. Autoencoder for molecule. How smooth is this space. Framed as Netlix recommender with parameters fixed.
 
-- Age related macular disease. Vision loss. CV augmented human vision. Deep CV on eye images for precision timing and dosing of drug. 
+- Age related macular disease. Vision loss. CV augmented human vision. Deep CV on eye images for precision timing and dosing of drug.
 
-400 people hackathon for P(success). 12 month fellowships for ML non-bio people. 
+400 people hackathon for P(success). 12 month fellowships for ML non-bio people.
 
 <https://dblp.org/pers/hd/e/Ebadollahi:Shahram>
 
-## Day 3 - PM - Parallel Tracks
+##  7. <a name='Day3-PM-ParallelTracks'></a>Day 3 - PM - Parallel Tracks
 
-### Education -  Enhancing human learning via spaced repetition optimization, Manuel Gomez Rodriguez
+###  7.1. <a name='Education-EnhancinghumanlearningviaspacedrepetitionoptimizationManuelGomezRodriguez'></a>Education -  Enhancing human learning via spaced repetition optimization, Manuel Gomez Rodriguez
 
-<https://https://ari9000.com/> code: AMLD 
+<https://https://ari9000.com/> code: AMLD
 
-Leitner systems for cards. 
+Leitner systems for cards.
 
 Modelling decay of memory. Half-life regression. It looks like this could use survival analysis. Censoring?  
 
-Stochastic optimal control for review. 
+Stochastic optimal control for review.
 
-### **Health - Roche - Mapping medical vocabulary terms with word embeddings, Pekka Tiikkainen**
+###  7.2. <a name='Health-Roche-MappingmedicalvocabularytermswithwordembeddingsPekkaTiikkainen'></a>**Health - Roche - Mapping medical vocabulary terms with word embeddings, Pekka Tiikkainen**
 
-Drug safety department. e.g. what is baseline event rate? ICD9-CM + 10. MedDRA RWD databases. Need to map vocabulary, often manually done before. 
+Drug safety department. e.g. what is baseline event rate? ICD9-CM + 10. MedDRA RWD databases. Need to map vocabulary, often manually done before.
 
 Use word embeddings. word2vec CBOW (context-> word) or skip-gram (word -> context).
 
-Used MIMIC3 and Roche internal data. 
+Used MIMIC3 and Roche internal data.
 
-Baseline: term concurence. See photo. 
+Baseline: term concurence. See photo.
 
-Pancreatic cancer often metstasticise in lungs, hence appearance in lung results. 
+Pancreatic cancer often metstasticise in lungs, hence appearance in lung results.
 
 fasttext and word2vec outperformed baseline. Corpus choice didn't change much.
 
-### **Imaging - EMBL-EBI - Machine Learning for Bioimage Informatics: Successes, Challenges, and Perspectives, Virginie Uhlmann**
+###  7.3. <a name='Imaging-EMBL-EBI-MachineLearningforBioimageInformatics:SuccessesChallengesandPerspectivesVirginieUhlmann'></a>**Imaging - EMBL-EBI - Machine Learning for Bioimage Informatics: Successes, Challenges, and Perspectives, Virginie Uhlmann**
 
 Prepared with Anne Carpenter, Jan Funke, Florian Jub, Anna Krushuk.
 
@@ -621,41 +715,42 @@ Huge datasets being generated. Each image is information dense. Keller lab:  <Di
 
 Want: quantitative, scalable and reproducible.
 
-Bioimaging - each experiment has its own kind of images. Question -> find something! 
+Bioimaging - each experiment has its own kind of images. Question -> find something!
 
 ilastik - rf classifier looks very powerful. Kreshuk group.
 
-Image restoration, image preprocessing, image based modelling. 
+Image restoration, image preprocessing, image based modelling.
 
 Martin Weigert et al. Nature Methods 2019, Content-aware image restoration: pushing the limits of fluorescence microscopy, <https://www.nature.com/articles/s41592-018-0216-7>
-Use high-light low noise regions to learn how to make high noise, low light. Then reverse. 
+Use high-light low noise regions to learn how to make high noise, low light. Then reverse.
 
-Noise2void: Krull et al CVPR 19. Learn what is correlated (signal) and what is uncorrelated (noise), then remove noise. 
+Noise2void: Krull et al CVPR 19. Learn what is correlated (signal) and what is uncorrelated (noise), then remove noise.
 
-Funke lab - Image understanding. EM images. Neuron tracing. 
+Funke lab - Image understanding. EM images. Neuron tracing.
 
-Buhmann et al, Automatic Detection of Synaptic Partners in a Whole-Brain Drosophila EM Dataset, https://www.biorxiv.org/content/10.1101/2019.12.12.874172v1. 
-Eckstein et al. Neurotranslitter classification.  Predict what kind of neurotransmitter is released in some regions. 
+Buhmann et al, Automatic Detection of Synaptic Partners in a Whole-Brain Drosophila EM Dataset, https://www.biorxiv.org/content/10.1101/2019.12.12.874172v1.
+Eckstein et al. Neurotranslitter classification.  Predict what kind of neurotransmitter is released in some regions.
 
-Kruskuk et al: Complete Cryo-EM imaging of platynereis flat worm. 8TBs. 12k cells. 
+Kruskuk et al: Complete Cryo-EM imaging of platynereis flat worm. 8TBs. 12k cells.
 
-#### Image-based modelling
+####  7.3.1. <a name='Image-basedmodelling'></a>Image-based modelling
+
 Soham Mandal et al, biorxiv 19. CNN- > morphology. Diff. geometry. eg 6-cell stage mouse embryo. Hiiragi group EMBL. Deformation infers cell function? Diffeomorphic mapping? Sharpe group, Barcelona. .
 
 Carpenter lab: Cell Profiler. Images for drug discovery. Juan. Caicedo et al. CVPR 18, Weakly Supervised Learning of Single-Cell Feature Embeddings, <http://openaccess.thecvf.com/content_cvpr_2018/html/Caicedo_Weakly_Supervised_Learning_CVPR_2018_paper.html>
-What is the latent representation learnt? Note that annotators didn't know that mutations causing cancer. Network manages to identify mutation clusters. 
+What is the latent representation learnt? Note that annotators didn't know that mutations causing cancer. Network manages to identify mutation clusters.
 
-See also Rohban et al, mental health work. Distribution in low dim space is different depending on norma and disorders. 
+See also Rohban et al, mental health work. Distribution in low dim space is different depending on norma and disorders.
 
-Challenges: Annotation, integrate omics, correlate imaging techniques. 
+Challenges: Annotation, integrate omics, correlate imaging techniques.
 
-Community : image.sc<https://forum.image.sc/> 
+Community : image.sc<https://forum.image.sc/>
 
 Nature Methods: Deep Learning in Microscopy.
 
-Segmentation still a big issue. 
+Segmentation still a big issue.
 
-### Health -  Beyond lesion count: machine learning based imaging markers in multiple sclerosis
+###  7.4. <a name='Health-Beyondlesioncount:machinelearningbasedimagingmarkersinmultiplesclerosis'></a>Health -  Beyond lesion count: machine learning based imaging markers in multiple sclerosis
 
 Liu et al Lancet Digital Health, A comparison of deep learning performance against health-care professionals in detecting diseases from medical imaging: a systematic review and meta-analysis. <https://www.thelancet.com/journals/landig/article/PIIS2589-7500(19)30123-2/fulltext>
 
@@ -663,23 +758,23 @@ Most MS lesions have a vein in the middle - how the disease propagates.
 
 Ravano et al disconectome ECTRIMS 19.
 
-## Day 3  - Evening session
+##  8. <a name='Day3-Eveningsession'></a>Day 3  - Evening session
 
-### Vetterli
+###  8.1. <a name='Vetterli'></a>Vetterli
 
 <https://www.theguardian.com/books/2019/oct/24/human-compatible-ai-problem-control-stuart-russell-review>
 
-Ball: How to grow a human. 
+Ball: How to grow a human.
 
 RUR Kapek
 
-### Kosinski - The End of Privacy
+###  8.2. <a name='Kosinski-TheEndofPrivacy'></a>Kosinski - The End of Privacy
 
 500mb digital footprint everyday in 2012 (IBM).
 
 3 traits link personality and face.
 
-Hormones affect faces. 
+Hormones affect faces.
 
 Traits from faces: People get about 54% in lab test. Think about how gender can be determined. Brain just not evolved to this yet. Computer hits work colleague level  of accuracy.
 
@@ -687,9 +782,9 @@ Predicting political views from faces: 90% accurate.
 
 Privacy is already lot. We need to make the post-privacy world livable. The problem is not privacy, it is e.g. homophobia.
 
-### Tegmark
+###  8.3. <a name='Tegmark'></a>Tegmark
 
-Ultrasound for everyone:  https://www.butterflynetwork.com/
+Ultrasound for everyone:  <https://www.butterflynetwork.com/>
 
 Asilomar 2017, Principles: <https://futureoflife.org/ai-principles/?cn-reloaded=1>
 
@@ -704,14 +799,13 @@ A core challenge for both physics and artificial intellicence (AI) is symbolic r
 
 <https://rodneybrooks.com/blog/>
 
-AI in sustainable development goals. Tegmark et al. 
+AI in sustainable development goals. Tegmark et al.
 
-## Some NLP references
+##  9. <a name='SomeNLPreferences'></a>Some NLP references
 
 Pytorch lightening preferred high level abstraction by NLP at scale guys. See also Pytorch ignite.
 
 <https://github.com/flairNLP/flair>
-
 
 Ruder newsletter <http://newsletter.ruder.io/issues/nlp-progress-restrospectives-and-look-ahead-new-nlp-courses-independent-research-initiatives-interviews-lots-of-resources-217744>
 
@@ -719,27 +813,26 @@ Ruder newsletter <http://newsletter.ruder.io/issues/nlp-progress-restrospectives
 
 <https://ml6.eu/a-general-pattern-for-deploying-embedding-based-machine-learning-models/>
 
+##  10. <a name='Day4AM-AIPharma'></a>Day 4 AM - AI & Pharma
 
-## Day 4 AM - AI & Pharma
-
-### Roche Intro - Asif Jan
+###  10.1. <a name='RocheIntro-AsifJan'></a>Roche Intro - Asif Jan
 
 General overview.
 
-### Developing Digital Measures from Person-Generated Health Data, Luca Foschini, Co-founder & Chief Data Scientist, Evidation Health
+###  10.2. <a name='DevelopingDigitalMeasuresfromPerson-GeneratedHealthDataLucaFoschiniCo-founderChiefDataScientistEvidationHealth'></a>Developing Digital Measures from Person-Generated Health Data, Luca Foschini, Co-founder & Chief Data Scientist, Evidation Health
 
 Person Generated Health Data. Toward achieving precision health.
-Gambhir SS, <https://www.ncbi.nlm.nih.gov/pubmed/29491186>. ALso includes patient reported data. 
+Gambhir SS, <https://www.ncbi.nlm.nih.gov/pubmed/29491186>. ALso includes patient reported data.
 
-path collaborative wearable tech landscape. 
+path collaborative wearable tech landscape.
 
-What happens in between visits to the doctor. 
+What happens in between visits to the doctor.
 
-Evidation Achievement - anyone can use with open data sharing. Can join clinical studies. Reconsent for every retro analysis for complete clarity. 
+Evidation Achievement - anyone can use with open data sharing. Can join clinical studies. Reconsent for every retro analysis for complete clarity.
 
 Combination of passive and task-based data collected.
 
-Behaviourgram  - find a way to actually look at your data! Inspect data quality and generated hypotheses to test. Most useful part of study. 
+Behaviourgram  - find a way to actually look at your data! Inspect data quality and generated hypotheses to test. Most useful part of study.
 
 Can you differentiate cohorts based on behaviourgram. Features engineered in usual way. xgboost used for predictions. Behaviorome.
 
@@ -747,13 +840,13 @@ SHAP used for interpretation.
 
 <https://evidation.com/research/>
 
-Structured data DL: https://towardsdatascience.com/structured-deep-learning-b8ca4138b848 etc.
+Structured data DL: <https://towardsdatascience.com/structured-deep-learning-b8ca4138b848> etc.
 
-### Retinai -  Detection and quantification of disease biomarkers in ophthalmology, Agata Mosinska
+###  10.3. <a name='Retinai-DetectionandquantificationofdiseasebiomarkersinophthalmologyAgataMosinska'></a>Retinai -  Detection and quantification of disease biomarkers in ophthalmology, Agata Mosinska
 
-### Astra Zeneca Bayesian Neural Networks for toxicity prediction, Elizaveta Semenova
+###  10.4. <a name='AstraZenecaBayesianNeuralNetworksfortoxicitypredictionElizavetaSemenova'></a>Astra Zeneca Bayesian Neural Networks for toxicity prediction, Elizaveta Semenova
 
-Drug induced liver injury. 
+Drug induced liver injury.
 
 Preclinical models only transfer to humans in 45%: Concordance of toxicity... <https://www.ncbi.nlm.nih.gov/pubmed/11029269>
 
@@ -763,56 +856,56 @@ Interpretable Outcome Prediction with Sparse Bayesian Neural Networks in Intensi
 
 Moving beyond Binary Predictions of Human Drug-Induced Liver Injury (DILI) toward Contrasting Relative Risk Potential, Aleo MD <https://www.ncbi.nlm.nih.gov/pubmed/31532188>
 
-Ordered logistic regression (increasing severity score). 
+Ordered logistic regression (increasing severity score).
 
 Predicting Drug-Induced Liver Injury with Bayesian Machine Learning, Williams DP, <https://www.ncbi.nlm.nih.gov/pubmed/31535850>
 
-Weights and biases described by distribution. Variances are being inferred from data. 
+Weights and biases described by distribution. Variances are being inferred from data.
 
-Evaluation - WAIC. Ordered Brier Score - cares about the order. 
+Evaluation - WAIC. Ordered Brier Score - cares about the order.
 
 150 parameters. Posterior calculated: prior, ordered likelihood (contributed this).
 
-### Roche - A Machine Learning perspective on the emotional content of Parkinsonian speech, Konstantinos Sechidis
+###  10.5. <a name='Roche-AMachineLearningperspectiveontheemotionalcontentofParkinsonianspeechKonstantinosSechidis'></a>Roche - A Machine Learning perspective on the emotional content of Parkinsonian speech, Konstantinos Sechidis
 
-PD perceived as being unhappier compared to control, negative impact to sufferer - isolation  etc. 
+PD perceived as being unhappier compared to control, negative impact to sufferer - isolation  etc.
 
-Combine mobile sensor data, treatment, speech etc. Annotated MP3 data. There are a few emotional speech databases. Often actors. 
+Combine mobile sensor data, treatment, speech etc. Annotated MP3 data. There are a few emotional speech databases. Often actors.
 
 Standard feature engineering - 132 features. Catboost 2018. Mixture-of-Experts ensemble (k models).
 
-train: gbm, val: lr, num trees, tree depth. stratified cross-val (of course!). 
+train: gbm, val: lr, num trees, tree depth. stratified cross-val (of course!).
 
-Weird choice to note combine databases 'to avoid biases' - I would have precisely combined the data for this reason. Maybe I'm missing something? 
+Weird choice to note combine databases 'to avoid biases' - I would have precisely combined the data for this reason. Maybe I'm missing something?
 
-### U. Manchester -  On the Stability and Reproducibility of Data Science Pipelines, Gavin Brown
+###  10.6. <a name='U.Manchester-OntheStabilityandReproducibilityofDataSciencePipelinesGavinBrown'></a>U. Manchester -  On the Stability and Reproducibility of Data Science Pipelines, Gavin Brown
 
-With Roche and AZ. 
+With Roche and AZ.
 
 Thesis: Reproducibility=Trust. We can measure Repro.
 
-Data-driven biomarker detection. 
+Data-driven biomarker detection.
 
-Drop percentages of data to measure stability. Set theoretic as its on features. But then he talks about dropping data points, which is features. 
+Drop percentages of data to measure stability. Set theoretic as its on features. But then he talks about dropping data points, which is features.
 
-5 properties. 
+5 properties.
 
 On The Stability of Feature Selection in the
 Presence of Feature Correlations:  <http://www.cs.man.ac.uk/~gbrown/publications/ECML2019_stability.pdf>
 
-### Turing Institute -  Going beyond the average: causal machine learning for treatment effect heterogeneity estimation, Karla DiazOrdaz
+###  10.7. <a name='TuringInstitute-Goingbeyondtheaverage:causalmachinelearningfortreatmenteffectheterogeneityestimationKarlaDiazOrdaz'></a>Turing Institute -  Going beyond the average: causal machine learning for treatment effect heterogeneity estimation, Karla DiazOrdaz
 
 Causal effects of cancer treatments. Potential outcomes. Causal estimand. Statistical estimand from observed data. average treatment effect (ATE), conditional average treatment effect (CATE). <https://arxiv.org/pdf/1903.00402.pdf>
 
-Intervals: bootstrap not good. Plug-in bias in ML. Doubly-robust estimators. See also targeted MLE. 
+Intervals: bootstrap not good. Plug-in bias in ML. Doubly-robust estimators. See also targeted MLE.
 
 Causal forest - <https://scholar.princeton.edu/sites/default/files/bstewart/files/lundberg_methods_tutorial_reading_group_version.pdf>
 
-Maximise heterogeneity in treatment effect in terminal node, rather than  rmse. "Honesty". 
+Maximise heterogeneity in treatment effect in terminal node, rather than  rmse. "Honesty".
 
-Double Machine Learning? 
+Double Machine Learning?
 
-### Novartis -  AE Brain - Detecting Adverse Drug Events with NLP, Damir Bucar & Moritz Freidank. 
+###  10.8. <a name='Novartis-AEBrain-DetectingAdverseDrugEventswithNLPDamirBucarMoritzFreidank.'></a>Novartis -  AE Brain - Detecting Adverse Drug Events with NLP, Damir Bucar & Moritz Freidank.
 
 Monitoring social media text for potential cases of adverse events is an important, but manual and expensive task in pharmacovigilance. AE Brain uses an ensemble of NLP models (BERT, BioBERT, character-based models) to automatically detect potential mentions of adverse events and reduce the manual workload required for monitoring. By adopting a **human-in-the-loop** approach and rendering re-training fully reproducible our system ensures continuous improvement of our model and achieves GxP compliance.
 
@@ -826,7 +919,7 @@ Inter-annotator agreement as issue. Only gave results
 
 Split tweet into sentence, then binary classifier. Forward to human reviewer. Class imbalance. Low annotator agreement. Implicit context. BERT and BioBERT. Bidirectionality clearly useful here.
 
-512 max seq. length - very important, as high as you can get. batch size 4. 0.0001. 3 epochs. uncased. BioBERT worse overall, but good for edge cases. Ensembles used. Different random seeds for same model too. Any positive goes to human riew. All ensembled. Some rule based methods use for edge cases too. 
+512 max seq. length - very important, as high as you can get. batch size 4. 0.0001. 3 epochs. uncased. BioBERT worse overall, but good for edge cases. Ensembles used. Different random seeds for same model too. Any positive goes to human riew. All ensembled. Some rule based methods use for edge cases too.
 
 Retraining for model drift. Use human review to feedback. Subsampled negatives too to feedback into retrain (ie those not seen by human).
 
@@ -834,11 +927,12 @@ English for now. Pointing
 
 **Pan-industry  - looking for collaborators**
 
-### Novartis - Fully unsupervised deep mode of action learning for phenotyping high-content cellular
+###  10.9. <a name='Novartis-Fullyunsuperviseddeepmodeofactionlearningforphenotypinghigh-contentcellular'></a>Novartis - Fully unsupervised deep mode of action learning for phenotyping high-content cellular
+
 images, Rens Janssens
 
 No superivison on mode of action. Use unsupervised DL to look for clusters of mode of action.
-Multiscale CNN <https://www.ncbi.nlm.nih.gov/pubmed/28203779> and Facebook AI clustering. 
+Multiscale CNN <https://www.ncbi.nlm.nih.gov/pubmed/28203779> and Facebook AI clustering.
 
 Multiscale has big field of few - local and overall cell population.
 
@@ -846,13 +940,13 @@ Remove last layer to get embeddings. Batch correaction, whitened, tse and cluste
 
 Tiled images
 
-Clustered. Some separation is clear before training. Look  at clusters epoch by epoch. 
+Clustered. Some separation is clear before training. Look  at clusters epoch by epoch.
 
-Leave out one mode of action and test. Good results. 
+Leave out one mode of action and test. Good results.
 
-### Novartis -  Benchmarking initiative: making sense of AI through the common task framework, Mark Bailli
+###  10.10. <a name='Novartis-Benchmarkinginitiative:makingsenseofAIthroughthecommontaskframeworkMarkBailli'></a>Novartis -  Benchmarking initiative: making sense of AI through the common task framework, Mark Bailli
 
-Care with confoudning issues, e.g. picking up prior surgery marks. 
+Care with confoudning issues, e.g. picking up prior surgery marks.
 
 Large landscape: <https://techburst.io/ai-in-healthcare-industry-landscape-c433829b320c>
 
@@ -863,47 +957,47 @@ How to systematically evaluate innovation:
 
 50 years of Data Science: <https://www.tandfonline.com/doi/full/10.1080/10618600.2017.1384734>
 
-Common task - shared data - standard evaluation. 
+Common task - shared data - standard evaluation.
 
-Tukey wrong guidelines. 
+Tukey wrong guidelines.
 
 Tripod Statement. <https://www.tripod-statement.org/>
 
-Equator network <https://www.equator-network.org/> 
+Equator network <https://www.equator-network.org/>
 
-Used for external vendors only for now. Used on data challenges. 
+Used for external vendors only for now. Used on data challenges.
 
 Confessions of a pragmatic statistician. Chris Chatfield
 <http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.93.3273&rep=rep1&type=pdf>
 
-Implentationn is the real black box. 
+Implentationn is the real black box.
 
-Research on research. ImageNet for clinical data. 
+Research on research. ImageNet for clinical data.
 
-### Roche -  Artificial Intelligence in clinical development. Marco Prunotto
+###  10.11. <a name='Roche-ArtificialIntelligenceinclinicaldevelopment.MarcoPrunotto'></a>Roche -  Artificial Intelligence in clinical development. Marco Prunotto
 
-Innovation embedded in all departments. 
+Innovation embedded in all departments.
 
 Efficacy is the biggest issue. Low win value from early design. Preclinical to clinical link is the
-biggest win. 
+biggest win.
 
-Clinical -> PoC as big win two. Repurposing drugs. 
+Clinical -> PoC as big win two. Repurposing drugs.
 
-Qualify novel endpoints. 6 minutes walk test still used a lot. 
+Qualify novel endpoints. 6 minutes walk test still used a lot.
 
-MARINA trial with huge country variabiltiy due to number of injections required. 
+MARINA trial with huge country variabiltiy due to number of injections required.
 
-Ph2 LADDER trial. 
+Ph2 LADDER trial.
 
-Question firsts. 
+Question firsts.
 
 Combine colonoscopy and stool proteomics to avoid full anesthesia on children.
 
-## Day 4 PM - AI & Molecules
+##  11. <a name='Day4PM-AIMolecules'></a>Day 4 PM - AI & Molecules
 
 Bruno Correia <https://scholar.google.ch/citations?hl=en&user=Va246xYAAAAJ&view_op=list_works&sortby=pubdate>
 
-### BAIR: Jenny Listgarten  - Machine Learning-based Design of Proteins and Small Molecules
+###  11.1. <a name='BAIR:JennyListgarten-MachineLearning-basedDesignofProteinsandSmallMolecules'></a>BAIR: Jenny Listgarten  - Machine Learning-based Design of Proteins and Small Molecules
 
 Rethinking drug design in the artificial intelligence era
 <https://www.nature.com/articles/s41573-019-0050-3?draft=collection>
@@ -929,9 +1023,9 @@ Sequence -> structure -> function
 
 but can skip structure and go function! Emerging trend.
 
-Assume there exists some predictive model - stoachastic oracle. Responses: protein expression, cell fitness. Looks like combinatorial optimisation. 
+Assume there exists some predictive model - stoachastic oracle. Responses: protein expression, cell fitness. Looks like combinatorial optimisation.
 
-Flip it. Uncertainty in predictions are now important. 
+Flip it. Uncertainty in predictions are now important.
 
 ML-based protein design. DNA sequence -> protein fluoro: oracle. Add constraints, like secondary structure remains unchanged.
 
@@ -947,17 +1041,17 @@ Design by adaptive sampling <arXiv:1810.03714>. The search model could be VAE, H
 
 Gives probability distribution over proteins.
 
-Kind of a first principles approach, even if NP hard. 
+Kind of a first principles approach, even if NP hard.
 
 Brookes, Park & Listgarten. ICML19 <http://proceedings.mlr.press/v97/brookes19a.html>
 
 Linked to Estimation of Distribution Algorithms. <https://arxiv.org/abs/1905.10474>
 
-Linked to RL. 
+Linked to RL.
 
-Image generation. Nguyen et al ICCV 17. 
+Image generation. Nguyen et al ICCV 17.
 
-**Assumes oracle in unbiased and has good uncertainty estimate** 
+**Assumes oracle in unbiased and has good uncertainty estimate**
 
 Flip - fix desired property and see what provokes it (think Zeiler and Fergus image work). But this gives crazy looking results.
 
@@ -965,11 +1059,11 @@ Try to fold in physics. Belonging to region ICML19.
 
 **there is no ground truth**
 
-Proposal - use GP mean model as ground truth. Then train an oracle model. 
+Proposal - use GP mean model as ground truth. Then train an oracle model.
 
-Note not Bayessian in that not acquiring new data. 
+Note not Bayessian in that not acquiring new data.
 
-### U Geneva: Conditional Generation of Molecules from Disentangled Representations. Amina Mollaysa
+###  11.2. <a name='UGeneva:ConditionalGenerationofMoleculesfromDisentangledRepresentations.AminaMollaysa'></a>U Geneva: Conditional Generation of Molecules from Disentangled Representations. Amina Mollaysa
 
 Conditional image gen and style transfer for molecules.
 
@@ -979,7 +1073,7 @@ molecule -> smile -> embedding -> molecule embedding concatenated with responses
 
 No latent repn. can't do style transfer.
 
-Developed latent model. 
+Developed latent model.
 
 COnstrained ELBO
 
@@ -988,42 +1082,42 @@ Fixing a Broken ELBO, Alexander A. Alemi, <https://arxiv.org/abs/1711.00464>.
 
 Used Grammar based encoding.
 
-### LBNL An Autoencoder for 3D Geometries of Atomic Structures with Euclidean Neural Networks, Tess E. Smidt.
+###  11.3. <a name='LBNLAnAutoencoderfor3DGeometriesofAtomicStructureswithEuclideanNeuralNetworksTessE.Smidt'></a>LBNL An Autoencoder for 3D Geometries of Atomic Structures with Euclidean Neural Networks, Tess E. Smidt
 
 <https://arxiv.org/abs/1802.08219>
 
 Atomic structures are hierarchy. Build in symmetry from the start.
 
-Spherical harmonics appearing. 
+Spherical harmonics appearing.
 
-Can't just use scalar product due to geometry tensors. 
+Can't just use scalar product due to geometry tensors.
 
-### EPFL: Physics-inspired Machine Learning for Materials Discovery, Michele Ceriotti
+###  11.4. <a name='EPFL:Physics-inspiredMachineLearningforMaterialsDiscoveryMicheleCeriotti'></a>EPFL: Physics-inspired Machine Learning for Materials Discovery, Michele Ceriotti
 
-Kapil Engel, Rossi MC, JCTC 19. 
+Kapil Engel, Rossi MC, JCTC 19.
 
 Ket of features with right symmetry properties. Cartesian coordindates of atoms don't fulfill most of these. Start with repn. Separate density for each atomic species. Need to make invariant by integrating over symmetry group. cf convolution.
 
-Go to 3body correlations. Body order expansion equivalent to linear idea from ML approach. 
+Go to 3body correlations. Body order expansion equivalent to linear idea from ML approach.
 
-Sum over atom-centred positions. 
+Sum over atom-centred positions.
 
 Multiscale models.
 
 Cheng, MC PNAS 2019
 
-DUD-E protein ligand binding. Science Advances 2017. Same molecules listed as binders and non-binders for one protein - careful! 
+DUD-E protein ligand binding. Science Advances 2017. Same molecules listed as binders and non-binders for one protein - careful!
 
-Can predict electro densities. 
+Can predict electro densities.
 
-Salt - sum over squares or circles gives different answers. Need global info. 
+Salt - sum over squares or circles gives different answers. Need global info.
 
 Long-distance equivariant repn. Incorporating long-range physics in atomic-scale machine learning
 Grisafi, Andrea ; Ceriotti, Michele
 
 Ridge regression.
 
-### **Google DeepMind: AlphaFold -  Improved protein structure prediction using potentials from deep learning, Andrew Senior** 
+###  11.5. <a name='GoogleDeepMind:AlphaFold-ImprovedproteinstructurepredictionusingpotentialsfromdeeplearningAndrewSenior'></a>**Google DeepMind: AlphaFold -  Improved protein structure prediction using potentials from deep learning, Andrew Senior**
 
 <https://deepmind.com/blog/article/AlphaFold-Using-AI-for-scientific-discovery>
 
@@ -1037,47 +1131,47 @@ Protein shape informs function.
 
 Target and class of drugs.
 
-Mitochondrial ATP Synthase MRC. 
+Mitochondrial ATP Synthase MRC.
 
-AA sequence -> 3d structure, atom coordinates. 
+AA sequence -> 3d structure, atom coordinates.
 
-AA residues N and 2C connected in chain to form backbone. Plus side chains, functional groups. 
+AA residues N and 2C connected in chain to form backbone. Plus side chains, functional groups.
 
-Structure -> function. 
+Structure -> function.
 
-Experimental methods are difficult and expensive. 
+Experimental methods are difficult and expensive.
 
 N residues -> 2N  degrees of freedom: two angles/torsions: complete parameterisation. One representation
 
 Can also have distance matrix repn.
 
-Proteins can have long-range dependencies (folding). 
+Proteins can have long-range dependencies (folding).
 
-150k entries in PDB, but very redundant. About 30k for training. 
+150k entries in PDB, but very redundant. About 30k for training.
 
-#### Protein Co-evolution
+####  11.5.1. <a name='ProteinCo-evolution'></a>Protein Co-evolution
 
-DNA constantly mutating. Inherited proteins diverge. 20N sized space. Similar sequences likely then from a common ancestor and have similar structure. Multiple sequence alignements. 
+DNA constantly mutating. Inherited proteins diverge. 20N sized space. Similar sequences likely then from a common ancestor and have similar structure. Multiple sequence alignements.
 
-Touching residues important for stability. Various instabilities exist, so a destabilising mutation may want to a stabilising co-mutation. Liely in touching residues. 
+Touching residues important for stability. Various instabilities exist, so a destabilising mutation may want to a stabilising co-mutation. Liely in touching residues.
 
 FInd and align similar sequences. Compute measures of co-evolutionary correlation. Predict touching residues. Use predictions to narrow down structure search.
 
-DeepMind - probably more info in data. Distance prediction even better than predicting contacts. Look at groups of residues -> regions. Can infer secondary structure (like strand and contact). Propagate distance constraints. 
+DeepMind - probably more info in data. Distance prediction even better than predicting contacts. Look at groups of residues -> regions. Can infer secondary structure (like strand and contact). Propagate distance constraints.
 
-Predict histogram for distances: distogram. Predict torsions. Ramachandran plot. 
+Predict histogram for distances: distogram. Predict torsions. Ramachandran plot.
 
-Refinement and side chains from Rosetta. 
+Refinement and side chains from Rosetta.
 
-#### Deep distance distribution network
+####  11.5.2. <a name='Deepdistancedistributionnetwork'></a>Deep distance distribution network
 
 Inductive bias - using a 2d CNN.
 
-Deep dilated convolutional residual network. 
+Deep dilated convolutional residual network.
 
 Cropping - O(Lˆ2) memory needed for all distance pairs. Crop to 64x64 squares of distance matrix. Predict also interblocks to get long range interactions. Fits in memory. Works like data augmentation, using eg strides. Centre-weighted the predictions to avoid edge effects.
 
-Predictions are on blocks that are then combine. Can Ensemble too. Edges have. 
+Predictions are on blocks that are then combine. Can Ensemble too. Edges have.
 
 - random crop
 - Add noise
@@ -1085,8 +1179,7 @@ Predictions are on blocks that are then combine. Can Ensemble too. Edges have.
 - lr decay
 - multiple networks with different ICs ensembled.
 
-
-Nˆ2 distances and only 2N dof! 
+Nˆ2 distances and only 2N dof!
 
 Potentials for various terms - distance + torsion + no-touching.
 
@@ -1094,60 +1187,60 @@ Can initialize with a particular secondary structure.
 
 There are different domains - different folding for different parts. Can cut up, but not used in sgd approach with sklearn sgd.
 
-Approaching biological relevance. 
+Approaching biological relevance.
 
-Interpretability limited, but being worked on. 
+Interpretability limited, but being worked on.
 
-Code open-sourced. 
+Code open-sourced.
 
 ProSPr: Democratized Implementation of Alphafold Protein Distance Prediction Network
 <https://www.biorxiv.org/content/10.1101/830273v1>
 
 <https://github.com/dellacortelab/prospr>
 
-Expectation that Transformers will be appearing in next CASP. 
+Expectation that Transformers will be appearing in next CASP.
 
-### U. Liverpool Data Driven Discovery of Functional Molecular Co-Crystals, Aikaterini Vriza. 
+###  11.6. <a name='U.LiverpoolDataDrivenDiscoveryofFunctionalMolecularCo-CrystalsAikateriniVriza.'></a>U. Liverpool Data Driven Discovery of Functional Molecular Co-Crystals, Aikaterini Vriza.
 
-### LabGenius -  Knitting together synthetic biology, machine learning and robotics, Katya Putintseva
+###  11.7. <a name='LabGenius-KnittingtogethersyntheticbiologymachinelearningandroboticsKatyaPutintseva'></a>LabGenius -  Knitting together synthetic biology, machine learning and robotics, Katya Putintseva
 
 20k human body proteins.
 
-20ˆ27000 - largest protein. 
+20ˆ27000 - largest protein.
 
 Not all seen in nature. Some have also 'disappeared'
 
-#### Protein Fitness Landscape 
+####  11.7.1. <a name='ProteinFitnessLandscape'></a>Protein Fitness Landscape
 
 Each point a protein variant. Proximity means sequence is close.
 
-Build a map (?) -> empirical computation: experiments and computers. 
+Build a map (?) -> empirical computation: experiments and computers.
 
 - build trillions of protein variants
 - test for what you want
 - learn - ML mode
 - Design new
-- Continue 
+- Continue
 
-#### Main challenge
+####  11.7.2. <a name='Mainchallenge'></a>Main challenge
 
 Multi response. Deconvolution. Test for each property. Multi-objective optimisation.
 
 **Developing a protein embedding space.**
 
-Using quality score from NGS. 
+Using quality score from NGS.
 
-## Day 5 - Extension School training material.
+##  12. <a name='Day5-ExtensionSchooltrainingmaterial'></a>Day 5 - Extension School training material
 
 Slides <https://docs.google.com/presentation/d/1Jg9rO_3dXwKzJyDOr2ley8Is5oWKE6D_aJJlJrpw0mw/present?slide=id.g56fd04f168_3_117>
 
-https://github.com/epfl-exts
+<https://github.com/epfl-exts>
 
-### Anomaly detection with Isolation Forests
+###  12.1. <a name='AnomalydetectionwithIsolationForests'></a>Anomaly detection with Isolation Forests
 
 <https://github.com/epfl-exts/amld20-anomaly-detection>
 
-### Text classification
+###  12.2. <a name='Textclassification'></a>Text classification
 
 <https://github.com/epfl-exts/amld20-text-classification>
 
@@ -1155,17 +1248,17 @@ https://github.com/epfl-exts
 
 Standard regex and logistic regression in sklearn pipeline  <https://scikit-learn.org/stable/modules/generated/sklearn.pipeline.Pipeline.html>
 
-### Image Classification
+###  12.3. <a name='ImageClassification'></a>Image Classification
 
 <https://github.com/epfl-exts/amld20-image-classification>
 
-Some nice basics with histograms etc., then CNN. 
+Some nice basics with histograms etc., then CNN.
 
-### Facial recognition in videos
+###  12.4. <a name='Facialrecognitioninvideos'></a>Facial recognition in videos
 
 <https://github.com/epfl-exts/amld20-image-classification>
 
-## Day 5 PM - Start-ups etc
+##  13. <a name='Day5PM-Start-upsetc'></a>Day 5 PM - Start-ups etc
 
 <https://www.whattolabel.com> (AMLD2020)
 
@@ -1175,4 +1268,3 @@ NLP tutorial from DSSS19:
 <https://github.com/steve-wilson/ds32019>
 
 Causality link from Kostas (met at DSSS18, now at Roche): <https://www.edx.org/bio/miguel-hernan>
-
