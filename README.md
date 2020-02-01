@@ -2,7 +2,7 @@
 
 <https://appliedmldays.org/schedule>
 
-Some repos are stored here: <https://github.com/amld>
+The repos for the tutorials I attended plus a few extras can be found here. Some other tutorial repos are stored here: <https://github.com/amld>.
 
 Other random notes below. See also [Some NLP references](#SomeNLPreferences).
 
